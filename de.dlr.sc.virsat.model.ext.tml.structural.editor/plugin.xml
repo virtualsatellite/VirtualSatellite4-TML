@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated concept -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.dlr.sc.virsat.model.ext.tml.structural.structural.presentation.StructuralModelWizardID"
+            name="%_UI_StructuralModelWizard_label"
+            class="de.dlr.sc.virsat.model.ext.tml.structural.structural.presentation.StructuralModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/StructuralModelFile.gif">
+         <description>%_UI_StructuralModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated concept -->
+      <editor
+            id="de.dlr.sc.virsat.model.ext.tml.structural.structural.presentation.StructuralEditorID"
+            name="%_UI_StructuralEditor_label"
+            icon="icons/full/obj16/StructuralModelFile.gif"
+            extensions="structural"
+            class="de.dlr.sc.virsat.model.ext.tml.structural.structural.presentation.StructuralEditor"
+            contributorClass="de.dlr.sc.virsat.model.ext.tml.structural.structural.presentation.StructuralActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="de.dlr.sc.virsat.model.ext.tml.structural.structural.presentation.StructuralDMFEditorID"
+            name="Structural DMF Editor"
+            icon="icons/full/obj16/StructuralModelFile.gif"
+            extensions="dvlm"
+            class="de.dlr.sc.virsat.model.ext.tml.structural.structural.presentation.StructuralEditorCustom"
+            contributorClass="de.dlr.sc.virsat.model.ext.tml.structural.structural.presentation.StructuralActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

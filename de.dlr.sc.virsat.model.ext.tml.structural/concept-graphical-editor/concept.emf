@@ -1,0 +1,133 @@
+@namespace(uri="http://www.virsat.sc.dlr.de/dmf/v1.2/structural", prefix="dmf_structural")
+package structural;
+
+import "platform:/resource/de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.ecore";
+import "platform:/resource/de.dlr.sc.virsat.model/model/dvlm.ecore";
+
+@gmf.diagram
+class TaskingEnvironment extends dvlm.dmf.DObject {
+  val TaskDefinition[*] taskDefinitions;
+  val BasicTypeDefinition[*] basicTypeDefinitions;
+  val ReferenceFrameDefinition[*] referenceFrames;
+  val UnitDefinition[*] units;
+  val behavioral.ChannelBehaviorDefinition[*] channelBehaviorDefinitions;
+  val TaskInstance[*] tasks;
+  val Channel[*] channels;
+  val TimeEvent[*] timeEvents;
+  val DataType[*] dataTypes;
+  val Enumeration[*] enumerations;
+  val Attribute[*] globalParameters;
+}
+
+class IEventSource extends dvlm.dmf.DObject {
+
+  @gmf.link(style="dash")
+  ref TaskInput inputs;
+}
+
+class IType extends dvlm.dmf.DObject {
+}
+
+class TaskDefinition extends dvlm.dmf.DObject {
+  val TaskInputDefinition[*] inputs;
+  val TaskOutputDefinition[*] outputs;
+  val Attribute[*] parameters;
+  attr String serializedDefinition;
+}
+
+class TaskInputDefinition extends dvlm.dmf.DObject {
+  ref DataType dataType;
+}
+
+class TaskOutputDefinition extends dvlm.dmf.DObject {
+  ref DataType dataType;
+}
+
+class BasicTypeDefinition extends dvlm.dmf.DObject, IType {
+  attr EnumValueType valueType;
+  attr int size;
+  attr String source;
+  attr boolean customSource;
+}
+
+enum EnumValueType {
+  INTEGER = 1;
+  FLOAT = 2;
+  STRING = 3;
+}
+
+class ReferenceFrameDefinition extends dvlm.dmf.DObject {
+}
+
+class UnitDefinition extends dvlm.dmf.DObject {
+}
+
+@gmf.node(figure="rectangle", size="150,150", color="204,229,255", border.color="18,158,8", label="name", label.readOnly="true", label.icon="false")
+class TaskInstance extends dvlm.dmf.DObject {
+  ref TaskDefinition typeOf;
+  val behavioral.TaskBehavior taskBehavior;
+
+  @gmf.affixed
+  val TaskOutput[*] outputs;
+
+  @gmf.affixed
+  val TaskInput[*] inputs;
+}
+
+@gmf.node(label="name", label.placement="external", label.icon="false", size="20,20")
+class TaskInput extends dvlm.dmf.DObject {
+  ref TaskInputDefinition typeOf;
+  ref IEventSource trigger;
+  attr int activationThreshold = 0;
+  attr boolean isFinal = false;
+}
+
+@gmf.node(label="name", label.placement="external", label.icon="false", size="20,20")
+class TaskOutput extends dvlm.dmf.DObject {
+  ref TaskOutputDefinition typeOf;
+
+  @gmf.link(style="dash")
+  ref Channel[*] channels;
+}
+
+@gmf.node(size="40,20", label="name", label.placement="external", label.icon="false", color="0,128,0", label.readOnly="false")
+class TimeEvent extends dvlm.dmf.DObject, IEventSource {
+}
+
+@gmf.node(size="40,20", label="name", label.placement="external", label.icon="false", color="0,128,0", label.readOnly="true")
+class Channel extends dvlm.dmf.DObject, IEventSource {
+  ref DataType dataType;
+  val behavioral.ChannelBehavior channelBehavior;
+}
+
+class DataType extends dvlm.dmf.DObject, IType {
+  ref DataType superType;
+  val Attribute[*] attributes;
+  attr boolean abstractType;
+  attr String serializedDefinition;
+}
+
+class Attribute extends dvlm.dmf.DObject {
+  ref IType typeOf;
+  val ArrayDimension[*] dimensions;
+  ref ReferenceFrameDefinition referenceFrame;
+  ref UnitDefinition typeUnit;
+  attr boolean isConst;
+  attr String valueLiteral;
+  attr String maxValueLiteral;
+  attr String minValueLiteral;
+}
+
+class ArrayDimension extends dvlm.dmf.DObject {
+  attr int size;
+}
+
+class Enumeration extends dvlm.dmf.DObject, IType {
+  val EnumerationLiteral[*] literals;
+  attr String serializedDefinition;
+}
+
+class EnumerationLiteral extends dvlm.dmf.DObject {
+  attr int keyNum;
+}
+

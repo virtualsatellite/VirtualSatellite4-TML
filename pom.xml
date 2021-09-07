@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright (c) 2008-2019 German Aerospace Center (DLR), Simulation and 
+	Software Technology, Germany. This program and the accompanying materials 
+	are made available under the terms of the Eclipse Public License 2.0 which 
+	is available at http://www.eclipse.org/legal/epl-2.0. SPDX-License-Identifier: 
+	EPL-2.0 -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>de.dlr.sc.virsat.tml</groupId>
+	<artifactId>de.dlr.sc.virsat.tml.parent</artifactId>
+	<version>4.13.0-SNAPSHOT</version>
+	
+	<packaging>pom</packaging>
+
+	<profiles>
+		<profile>
+			<!-- Build profile for updating the target platform -->
+			<id>target</id>
+			<properties>
+				<build.src>tmodel-src</build.src>
+			</properties>
+			<modules>
+				<module>de.dlr.sc.virsat.tml.target</module>
+			</modules>
+		</profile>
+		<profile>
+			<!-- Build profile for building the main product -->
+			<id>product</id>
+			<properties>
+				<build.src>src</build.src>
+			</properties>
+
+			<modules>
+				<module>de.dlr.sc.virsat.tml.target</module>
+				<module>de.dlr.sc.virsat.tml.product</module>
+				<module>de.dlr.sc.virsat.tml.p2updatesite</module>
+		
+				<!-- The Extension for Tasking Modeling Language Feature -->
+				<module>de.dlr.sc.virsat.model.ext.tml</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.ui</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.generator</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.generator.tasking</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.feature</module>
+				
+				<module>de.dlr.sc.virsat.model.ext.tml.configuration</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.configuration.test</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.configuration.edit</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.configuration.editor</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.configuration.ui</module>
+				
+				<module>de.dlr.sc.virsat.model.ext.tml.behavioral</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.behavioral.edit</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.behavioral.test</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.behavioral.ui</module>
+				
+				<module>de.dlr.sc.virsat.model.ext.tml.behavioral.channeldefinition</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.behavioral.channeldefinition.ui</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.behavioral.channeldefinition.ide</module>
+				
+				<module>de.dlr.sc.virsat.model.ext.tml.structural</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.edit</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.editor</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.test</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.ui</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.diagram</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram</module>
+				
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration.ide</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration.ui</module>
+				
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration.datatypedefinition</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration.datatypedefinition.ide</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration.datatypedefinition.ui</module>
+				
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration.enumdefinition</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration.enumdefinition.ide</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration.enumdefinition.ui</module>
+				
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration.taskdefinition</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration.taskdefinition.ide</module>
+				<module>de.dlr.sc.virsat.model.ext.tml.structural.declaration.taskdefinition.ui</module>
+		
+		
+		
+				<module>de.dlr.sc.virsat.tml.branding.ui</module>
+				<module>de.dlr.sc.virsat.tml.branding.feature</module>
+				<module>de.dlr.sc.virsat.tml.license.feature</module>
+				<module>de.dlr.sc.virsat.tml.docs.feature</module>
+				
+				<module>de.dlr.sc.virsat.tml.test</module>
+			</modules>
+		</profile>
+	</profiles>
+</project> 

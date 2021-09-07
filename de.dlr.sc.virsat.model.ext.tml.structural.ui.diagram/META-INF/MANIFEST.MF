@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: VirSat Model Extension TML Structural UI Diagram
+Bundle-SymbolicName: de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram;singleton:=true
+Bundle-Version: 4.13.0.qualifier
+Bundle-Activator: de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ de.dlr.sc.virsat.graphiti,
+ de.dlr.sc.virsat.graphiti.ui,
+ org.eclipse.graphiti,
+ org.eclipse.graphiti.mm,
+ de.dlr.sc.virsat.model.ext.tml.structural,
+ org.eclipse.emf.workspace,
+ de.dlr.sc.virsat.model.edit,
+ de.dlr.sc.virsat.project,
+ de.dlr.sc.virsat.uiengine.ui,
+ de.dlr.sc.virsat.project.ui,
+ de.dlr.sc.virsat.model.ext.tml,
+ de.dlr.sc.virsat.model.ext.tml.ui,
+ org.apache.commons.lang
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: DLR (German Aerospace Center)
+Export-Package: de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram,
+ de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.taskingenv,
+ de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.taskingenv.providers
+Import-Package: de.dlr.sc.virsat.model.ext.tml.structural.structural,
+ de.dlr.sc.virsat.project.editingDomain,
+ de.dlr.sc.virsat.uiengine.ui.dialog

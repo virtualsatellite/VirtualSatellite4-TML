@@ -1,0 +1,358 @@
+Concept de.dlr.sc.virsat.model.ext.tml.structural displayname "Tasking Structure" hasDMF version 1.6 description "Example Concept for Interface Architecture" 
+{
+	Import de.dlr.sc.virsat.model.extension.ps.*;
+	Import de.dlr.sc.virsat.model.ext.tml.behavioral.*;
+	
+	StructuralElement TMLRoot description "Optional TML root element if now other concepts shall be used" {
+		IsRootStructuralElement;
+	}
+	
+	Category TaskingDefinition description "Overall Container to describe a tasking definitions" {
+		Applicable For [ElementDefinition, TMLRoot];
+		Cardinality 1;
+		
+		//Type definitions
+		Type basicTypeDefinitions[] of Category BasicTypeDefinition;
+		Type enumerations[] of Category Enumeration; 
+		Type dataTypes[] of Category DataType;
+		Type externalTypes[] of Category ExternalType;
+		
+		//Channel definition
+		Type channelBehaviorDefinitions[] of Category ChannelBehaviorDefinition;
+	
+		//Task definitions
+		Type taskDefinitions[] of Category TaskDefinition;
+		
+		//Others
+		Type referenceFrames[] of Category ReferenceFrameDefinition;
+		Type units[] of Category UnitDefinition;
+	}
+	
+	/*
+	 * Overall Container
+	 */
+	Category TaskingEnvironment description "Overall Container to describe a task model" {
+		Applicable For [ElementConfiguration, TMLRoot];
+		
+		//Domain instances
+		Type tasks[] of Category TaskInstance;
+		Type channels[] of Category Channel;
+		Type timeEvents[] of Category TimeEvent;
+		Type globalParameters[] of Category Attribute;
+		
+		StringProperty lastDiagramChange;
+		
+		/*
+		 * Scheduling policy of task
+		 */
+		 EnumProperty schedularPolicy values [Priority=1, FIFO=2, LIFO=3] default Priority description "Scheduling policy of task";
+		 
+		 /**
+		  * The number of executors of the scheduler element
+		  */
+		 IntProperty numberOfExecutors default 1 description "The number of executors of the scheduler element";
+	}
+	
+	/*
+	 * ############# START - Interfaces #############
+	 */
+	/*
+	 * Interface for all kinds of event sources
+	 */
+	Category IEventSource description "Interface for all kinds of event sources"{	
+		
+		Reference inputs[] of Type TaskInput;
+		
+	}
+	
+	Category IType description "Interface for all kinds of types"{	
+	}
+	/*
+	 * ############# END - Interfaces ###############
+	 */
+	 
+	 
+	
+	/*
+	 * ##### START - Categories for element definition #######
+	 */
+	 
+	/*
+	 * Pure definition and specification of a task
+	 */
+	Category TaskDefinition description "Pure definition and specification of a task" {
+		Applicable For [ElementDefinition];	
+			
+		/*
+		 * Explicit definition via text editor or implicit via instance creation in graphical editor
+		 */
+		
+		/*
+		 * Definitions of task inputs 
+		 */
+		Type inputs[] of Category TaskInputDefinition description "Definitions of task inputs";
+		
+		/*
+		 * Definitions of task outputs 
+		 */
+		Type outputs[] of Category TaskOutputDefinition description "Definitions of task outputs ";
+		
+		/*
+		 * Definition of task parameters
+		 */
+		Type parameters[] of Category Attribute description "Definition of task parameters";
+		
+		
+		/*
+		 * Serialized definition of textual DSL
+		 */
+		StringProperty serializedDefinition description "Serialized definition of textual DSL";
+		
+		/*
+		 * Scheduling policy of task
+		 */
+		 EnumProperty schedulePolicy values [Priority=1, FIFO=2, LIFO=3] default Priority description "Scheduling policy of task";
+	}
+	
+	/*
+	 * Pure definition of a task input, specifying incoming data and events
+	 */
+	Category TaskInputDefinition description "Pure definition of a task input, specifying incoming data and events"{
+		
+		/*
+		 * Data type of task input. May be NULL if only event is relevant
+		 */
+		Reference dataType of Type DataType description "Data type of task input. May be NULL if only event is relevant";
+	}
+	
+	/*
+	 * Pure definition of a task output, specifying outgoing data and events
+	 */
+	Category TaskOutputDefinition description "Pure definition of a task output, specifying outgoing data and events"{
+		
+		/*
+		 * Data type of task output. May be NULL if only event is relevant
+		 */
+		Reference dataType of Type DataType description "Data type of task output. May be NULL if only event is relevant";
+	}
+	
+	/*
+	 * Definition of basic attribute type, that can be used to create data types
+	 */
+	Category BasicTypeDefinition extends IType description "Definition of basic attribute types, that can be used to create data type"{
+		
+		/*
+		 * Optional element that can be used to specify which kind of value is stored in an attribute of this type
+		 * Options: INTEGER, FLOAT, STRING
+		 * Setting this property allows basic editor validation and range checks 
+		 */
+		EnumProperty valueType  values [INTEGER=1, FLOAT=2, STRING=3] description "Optional element that can be used to specify which kind of value is stored in an attribute of this type";
+		
+		/*
+		 * Size of type, may be used for serialization
+		 */
+		IntProperty size description "Size of type, may be used for serialization";
+
+		/*
+		 * Source of the type, used for includes in the aimed language
+		 */
+		StringProperty source description "Source of the type, used for includes in the aimed language";
+
+		/*
+		 * Specifies weather source is a custom implementation
+		 */
+		BooleanProperty customSource description "Source of the type, used for includes in the aimed language" default false;
+		
+	}
+	
+	/*
+	 * Definition of reference frame, that can be used by attributes
+	 */
+	Category ReferenceFrameDefinition description "Definition of reference frame, that can be used by attributes"{
+		
+	}
+	
+	/*
+	 * Definition of units, that can be used by attributes
+	 */
+	Category UnitDefinition description "Definition of units, that can be used by attributes"{
+		
+	}
+	/*
+	 * ###### END - Categories for element definition #######
+	 */
+	 
+	 
+	/*
+	 * ###### START - Categories for element instances ########
+	 */
+	 /*
+	  * Instance of a TaskDefinition, contains a behavior that can configure inputs and outputs
+	  */
+	Category TaskInstance description "Instance of a TaskDefinition, contains a behavior that can configure inputs and outputs"{
+		Reference typeOf of Type TaskDefinition;
+		
+		IntProperty priority;
+		
+		//TODO Implement TaskBehavior: specifying input+output parameters
+		Type taskBehavior of Category TaskBehavior;
+		
+		//TODO Validate that inputs and outputs are instances only of valid definitions in the related task definition
+		Type outputs[] of Category TaskOutput;
+		Type inputs[] of Category TaskInput;
+	}
+	
+	/*
+	 * Instance of a TaskInputDefintion of the containing task, 
+	 * -> specifies where data or events are coming from
+	 */
+	Category TaskInput description "Instance of a TaskInputDefintion of the containing task, specifies where data or events are coming from"{
+		
+		Reference typeOf of Type TaskInputDefinition;
+		
+		Reference trigger of Type IEventSource description "Source of event triggering the containing task (->Event or Channel)";
+		
+		IntProperty activationThreshold default 0;
+		
+		BooleanProperty isFinal default false;
+		
+	}
+	
+	/*
+	 * Instance of a TaskInputDefintion of the containing task, 
+	 * -> specifies where outgoing data or going to
+	 */
+	Category TaskOutput description "Instance of a TaskInputDefintion of the containing task, specifies where data or events are going to"{
+		Reference typeOf of Type TaskOutputDefinition;
+		
+		//TODO validate data type
+		Reference channels[] of Type Channel;
+	}
+	/*
+	 * ####### END - Categories for element instances ##########
+	 */
+	
+	
+	/*
+	 * #### START - Categories without separate definition and instance #####
+	 */
+	
+	/*
+	 * Source of time-based events send to tasks
+	 */
+	Category TimeEvent extends IEventSource description "Source of time-based events send to tasks"{
+		
+		//TODO Behavior? Probably the most consistent way
+		IntProperty period;
+		IntProperty offset;
+	}
+	
+	/*
+	 * Data container - can specified as target or goal of tasks
+	 */
+	Category Channel extends IEventSource description "Data container - can specified as target or goal of tasks"{
+
+		//TODO To high modeling afford?
+		Reference dataType of Type DataType;
+		
+		Type channelBehavior of Category ChannelBehavior;
+		//TODO contains ChannelBehavior: specifying how data are stored 
+		// + (TransformationBehavior? -> may enable data conversion)
+	}
+	
+	/*
+	 * Data type - describing a set of data
+	 */
+	Category DataType extends IType description "Data type - describing a set of data"{
+		
+		Reference superType of Type DataType;
+		
+		Type attributes[] of Category Attribute;
+		
+		BooleanProperty abstractType default false;
+
+		
+		BooleanProperty isTMType default false;
+		
+		/*
+		 * Serialized definition of textual DSL
+		 */
+		StringProperty serializedDefinition description "Serialized definition of textual DSL";
+		
+	}
+	
+	/*
+	 * External type that is not generated and not necessarily complete modeled 
+	 */
+	Category ExternalType extends DataType description "External type that is not generated and not necessarily completely modeled "{
+	}
+	
+	/*
+	 * Attribute that is contained in a classifier and is typed
+	 */
+	Category Attribute description "Attribute that is contained in a classifier and is typed"{
+		
+		Reference typeOf of Type IType;
+		
+		Type dimensions[] of Category ArrayDimension;
+		
+		Reference referenceFrame of Type ReferenceFrameDefinition;
+		
+		Reference typeUnit of Type UnitDefinition;
+		
+		BooleanProperty isConst default false;
+		
+		/*
+		 * Value serialized as string
+		 */
+		StringProperty valueLiteral;
+		
+		/*
+		 * Maximal value serialized as string
+		 */
+		StringProperty maxValueLiteral;
+		
+		/*
+		 * Minimal value serialized as string
+		 */
+		StringProperty minValueLiteral;
+		
+	}
+	
+	/*
+	 * Specifying a array dimension with a fixed size
+	 */
+	Category ArrayDimension description "Specifying a array dimension with a fixed size"{
+		
+		IntProperty size;
+		 
+	}
+	
+	/*
+	 * Enumeration that is an implementation if the interface IType
+	 */
+	Category Enumeration extends IType
+	{
+		Type literals[] of Category EnumerationLiteral;
+		
+		/*
+		 * Serialized definition of textual DSL
+		 */
+		StringProperty serializedDefinition description "Serialized definition of textual DSL";
+	}
+
+	/*
+	 * Enumeration literal contained in an enumeration
+	 */
+	Category EnumerationLiteral 
+	{
+		IntProperty keyNum;
+	}
+	
+	/*
+	 * ### END - Categories without separate definition and instance ####
+	 */
+	
+	
+}
+

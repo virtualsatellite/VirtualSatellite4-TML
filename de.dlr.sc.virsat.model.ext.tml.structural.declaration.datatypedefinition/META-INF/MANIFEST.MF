@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: de.dlr.sc.virsat.model.ext.tml.structural.declaration.datatypedefinition
+Bundle-Vendor: My Company
+Bundle-Version: 4.13.0.qualifier
+Bundle-SymbolicName: de.dlr.sc.virsat.model.ext.tml.structural.declaration.datatypedefinition; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.dlr.sc.virsat.model.ext.tml.structural,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ de.dlr.sc.virsat.model.ext.tml.structural,
+ de.dlr.sc.virsat.model.ext.tml.structural.declaration;bundle-version="1.0.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib;bundle-version="2.14.0",
+ de.dlr.sc.virsat.project;bundle-version="4.4.0",
+ de.dlr.sc.virsat.model.ext.tml;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.dlr.sc.virsat.model.ext.tml.structural.declaration.parser.antlr.internal,
+ de.dlr.sc.virsat.model.ext.tml.structural.declaration.parser.antlr,
+ de.dlr.sc.virsat.model.ext.tml.structural.declaration.services,
+ de.dlr.sc.virsat.model.ext.tml.structural.declaration.serializer,
+ de.dlr.sc.virsat.model.ext.tml.structural.declaration.validation,
+ de.dlr.sc.virsat.model.ext.tml.structural.declaration.generator,
+ de.dlr.sc.virsat.model.ext.tml.structural.declaration.formatting2,
+ de.dlr.sc.virsat.model.ext.tml.structural.declaration,
+ de.dlr.sc.virsat.model.ext.tml.structural.declaration.scoping
+Import-Package: org.apache.log4j
+Automatic-Module-Name: de.dlr.sc.virsat.model.ext.tml.structural.declaration.datatypedefinition

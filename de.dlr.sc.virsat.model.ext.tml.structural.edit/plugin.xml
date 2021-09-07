@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated concept -->
+      <factory
+            uri="http://www.virsat.sc.dlr.de/dmf/v1.6/structural"
+            class="de.dlr.sc.virsat.model.ext.tml.structural.structural.provider.StructuralItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+   
+    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http://www.virsat.sc.dlr.de/dmf/v1.3/structural"
+            class="de.dlr.sc.virsat.model.ext.tml.structural.structural.provider.StructuralItemProviderAdapterFactoryCustom"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+   
+
+</plugin>

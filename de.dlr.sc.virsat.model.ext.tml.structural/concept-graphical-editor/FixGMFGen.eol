@@ -1,0 +1,15 @@
+"Start fixing genmodel...".println();
+
+var emfTool = new Native("org.eclipse.epsilon.emc.emf.tools.EmfTool");
+var ecoreUtil = emfTool.ecoreUtil;
+
+var genEditorGenerator := GmfGen!GenEditorGenerator.all.first;
+genEditorGenerator.diagramFileExtension = 'tml_system';
+genEditorGenerator.pluginDirectory = '/de.dlr.sc.virsat.model.ext.tml.structural.diagram/src-gen';
+genEditorGenerator.modelID = 'TMLSystem';
+
+var genPlugin := GmfGen!GenPlugin.all.first;
+genPlugin.iD = "de.dlr.sc.virsat.model.ext.tml.structural.diagram";
+
+
+"Finished fixing genmodel...".println();

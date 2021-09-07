@@ -1,0 +1,31 @@
+/*******************************************************************************
+ * Copyright (c) 2008-2019 German Aerospace Center (DLR), Simulation and Software Technology, Germany.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+ grammar de.dlr.sc.virsat.model.ext.tml.structural.declaration.DatatypeDefinition with de.dlr.sc.virsat.model.ext.tml.structural.DeclarationLangauge
+
+import "http://www.virsat.sc.dlr.de/dmf/v1.6/structural" 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.virsat.sc.dlr.de/dmf/v1.1/behavioral" as behavioral
+
+
+StartRule returns DataType:
+	(DataType | ExternalType)
+;
+
+DataType returns DataType:
+	(abstractType?='abstract')? (isTMType?='telemetry')? 'DataType' name=EString ('extends' superType=[DataType|FQN])?
+	'{'
+		( attributes+=Attribute)* 
+	'}';
+
+ExternalType returns ExternalType:
+	'external' (abstractType?='abstract')? (isTMType?='telemetry')? 'DataType' name=EString ('extends' superType=[DataType|FQN])?
+	'{'
+		( attributes+=Attribute)* 
+	'}';

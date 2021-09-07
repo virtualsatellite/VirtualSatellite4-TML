@@ -1,0 +1,58 @@
+Concept de.dlr.sc.virsat.model.ext.tml.configuration displayname "Tasking Configuration" hasDMF version 1.8 description "Example Concept for Interface Architecture" 
+{
+	
+	Import de.dlr.sc.virsat.model.extension.ps.*;
+	Import de.dlr.sc.virsat.model.ext.tml.structural.*;
+	Import de.dlr.sc.virsat.model.ext.tml.behavioral.*;
+	
+	Category TMLConfiguration description "Contains all TML instance configuration"{
+		
+		Applicable For [ElementConfiguration, TMLRoot];
+		
+		Type generatorConfiguration of Category GenerationConfiguration;
+		
+	}
+	
+	
+	Category GenerationConfiguration description "Contains all generator related configuration"{
+		
+		StringProperty generationPath description "Path to folder where code should be generated to";
+		
+		StringProperty srcGenPath;
+		
+		StringProperty srcPath;
+		
+		StringProperty buildGenPath;
+		
+		StringProperty testPath;
+		
+		StringProperty taskDefinitionFolder;
+		
+		StringProperty channelDefinitionFolder;
+		
+		StringProperty typeDefinitionFolder;
+		
+		StringProperty contribFolder;
+		
+		StringProperty libconfigFolder;
+		
+		StringProperty taskingVersion;
+		
+		Type taskingEnvironmentConfiguration of Category TaskingEnvironmentConfiguration;
+		
+	}
+	
+	Category ElementConfiguration{
+		
+		StringProperty implementationName;
+		
+	}
+	
+	Category TaskingEnvironmentConfiguration extends ElementConfiguration{
+		
+		Reference domainElement of Type TaskingEnvironment;
+
+	}
+	
+}
+

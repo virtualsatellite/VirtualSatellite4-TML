@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: de.dlr.sc.virsat.model.ext.tml.behavioral.channeldefinition.ide
+Bundle-Vendor: My Company
+Bundle-Version: 4.13.0.qualifier
+Bundle-SymbolicName: de.dlr.sc.virsat.model.ext.tml.behavioral.channeldefinition.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.dlr.sc.virsat.model.ext.tml.behavioral.channeldefinition,
+ de.dlr.sc.virsat.model.ext.tml.behavioral,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.dlr.sc.virsat.model.ext.tml.behavioral.ide.contentassist.antlr.internal,
+ de.dlr.sc.virsat.model.ext.tml.behavioral.ide.contentassist.antlr
+Automatic-Module-Name: de.dlr.sc.virsat.model.ext.tml.behavioral.channeldefinition.ide
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension point="de.dlr.sc.virsat.model.Concept">
+		<concept
+			id="de.dlr.sc.virsat.model.ext.tml.behavioral"
+			version="1.1"
+			xmi="concept/concept.xmi">
+		</concept>
+	</extension>
+	<extension point="de.dlr.sc.virsat.model.DvlmValidator">
+		<dvlmValidator>
+			<seiValidator
+				id="de.dlr.sc.virsat.model.ext.tml.behavioral"
+				class="de.dlr.sc.virsat.model.ext.tml.behavioral.validator.BehavioralValidator">
+			</seiValidator>
+		</dvlmValidator>
+	</extension>
+	<extension point="de.dlr.sc.virsat.model.edit.ConceptTypeFactoryCaBeanRegistration">
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.behavioral.BehavioralParameterDefinition"
+			caBean="de.dlr.sc.virsat.model.ext.tml.behavioral.model.BehavioralParameterDefinition">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.behavioral.ChannelBehaviorDefinition"
+			caBean="de.dlr.sc.virsat.model.ext.tml.behavioral.model.ChannelBehaviorDefinition">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.behavioral.BehaviorDefintionStorage"
+			caBean="de.dlr.sc.virsat.model.ext.tml.behavioral.model.BehaviorDefintionStorage">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.behavioral.BehaviorDefinition"
+			caBean="de.dlr.sc.virsat.model.ext.tml.behavioral.model.BehaviorDefinition">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.behavioral.TimeEventBehaviorDefinition"
+			caBean="de.dlr.sc.virsat.model.ext.tml.behavioral.model.TimeEventBehaviorDefinition">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.behavioral.TaskBehavior"
+			caBean="de.dlr.sc.virsat.model.ext.tml.behavioral.model.TaskBehavior">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.behavioral.BehaviorParameter"
+			caBean="de.dlr.sc.virsat.model.ext.tml.behavioral.model.BehaviorParameter">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.behavioral.ChannelBehavior"
+			caBean="de.dlr.sc.virsat.model.ext.tml.behavioral.model.ChannelBehavior">
+		</CategoryAssignmentBean>
+	</extension>
+	<!-- Plugin.XML Protected Region Start -->
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.extension.tml.behavioral"
+		version="1.0"
+		class="de.dlr.sc.virsat.model.ext.tml.behavioral.migrator.Migrator1v0"
+		xmi="concept/concept_v1_0.xmi">
+	</migrator>
+</extension>
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.ext.tml.behavioral"
+		version="1.0"
+		class="de.dlr.sc.virsat.model.ext.tml.behavioral.migrator.Migrator1v0"
+		xmi="concept/concept_v1_0.xmi">
+	</migrator>
+</extension>
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.ext.tml.behavioral"
+		version="1.1"
+		class="de.dlr.sc.virsat.model.ext.tml.behavioral.migrator.Migrator1v1"
+		xmi="concept/concept_v1_1.xmi">
+	</migrator>
+</extension>
+	<!-- Plugin.XML Protected Region End -->
+	<!-- Plugin.XML Protected Region Start -->
+<extension
+      point="org.eclipse.emf.ecore.generated_package">
+   <package
+         class="de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralPackage"
+         genModel="concept/concept.genmodel"
+         uri="http://www.virsat.sc.dlr.de/dmf/v1.1/behavioral">
+   </package>
+</extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated concept -->
+      <parser
+            type="behavioral"
+            class="de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.util.BehavioralResourceFactoryImpl"/>
+   </extension>
+	<!-- Plugin.XML Protected Region End -->
+</plugin>

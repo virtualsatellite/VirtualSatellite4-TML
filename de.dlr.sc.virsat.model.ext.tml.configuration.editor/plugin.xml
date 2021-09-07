@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated concept -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.dlr.sc.virsat.model.ext.tml.configuration.configuration.presentation.ConfigurationModelWizardID"
+            name="%_UI_ConfigurationModelWizard_label"
+            class="de.dlr.sc.virsat.model.ext.tml.configuration.configuration.presentation.ConfigurationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ConfigurationModelFile.gif">
+         <description>%_UI_ConfigurationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated concept -->
+      <editor
+            id="de.dlr.sc.virsat.model.ext.tml.configuration.configuration.presentation.ConfigurationEditorID"
+            name="%_UI_ConfigurationEditor_label"
+            icon="icons/full/obj16/ConfigurationModelFile.gif"
+            extensions="configuration"
+            class="de.dlr.sc.virsat.model.ext.tml.configuration.configuration.presentation.ConfigurationEditor"
+            contributorClass="de.dlr.sc.virsat.model.ext.tml.configuration.configuration.presentation.ConfigurationActionBarContributor">
+      </editor>
+   </extension>
+   
+     <extension point="org.eclipse.ui.editors">
+      <editor
+            id="de.dlr.sc.virsat.model.ext.tml.configuration.configuration.presentation.ConfigurationDMFEditorID"
+            name="Configuration DMF Editor"
+            icon="icons/full/obj16/ConfigurationModelFile.gif"
+            extensions="dvlm"
+            class="de.dlr.sc.virsat.model.ext.tml.configuration.configuration.presentation.ConfigurationEditorCustom"
+            contributorClass="de.dlr.sc.virsat.model.ext.tml.configuration.configuration.presentation.ConfigurationActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

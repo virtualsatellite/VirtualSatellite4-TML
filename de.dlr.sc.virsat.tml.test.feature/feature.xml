@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.dlr.sc.virsat.tml.test.feature"
+      label="Virsat Tasking Modeling Language Tests Feature"
+      version="4.13.0.qualifier"
+      provider-name="DLR (German Aerospace Center)"
+      plugin="de.dlr.sc.virsat.tml.branding.ui">
+
+   <description>
+      Feature for workspace-wide Test Execution
+German Aerospace Center (DLR e.V.)
+Simulation and Software Technology
+   </description>
+
+   <copyright>
+      Copyright 2016
+
+by German Aerospace Center (DLR e.V.)
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.junit" version="4.12.0" match="greaterOrEqual"/>
+      <import plugin="de.dlr.sc.virsat.model"/>
+      <import feature="de.dlr.sc.virsat.model.feature" version="0.0.0" match="greaterOrEqual"/>
+      <import feature="de.dlr.sc.virsat.project.feature" version="0.0.0" match="greaterOrEqual"/>
+      <import feature="de.dlr.sc.virsat.tml.license.feature" version="0.0.0" match="greaterOrEqual"/>
+      <import plugin="de.dlr.sc.virsat.test"/>
+      <import plugin="de.dlr.sc.virsat.model.ext.tml.behavioral"/>
+      <import plugin="de.dlr.sc.virsat.model.ext.tml.structural"/>
+      <import plugin="de.dlr.sc.virsat.model.ext.tml.configuration"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="de.dlr.sc.virsat.model.edit"/>
+      <import plugin="de.dlr.sc.virsat.concept.unittest.util"/>
+      <import plugin="de.dlr.sc.virsat.model.ext.tml.behavioral" version="0.0.1" match="greaterOrEqual"/>
+      <import plugin="de.dlr.sc.virsat.model.ext.tml.configuration" version="0.0.1" match="greaterOrEqual"/>
+      <import plugin="de.dlr.sc.virsat.model.ext.tml.structural" version="0.0.1" match="greaterOrEqual"/>
+      <import feature="de.dlr.sc.virsat.model.ext.tml.feature" version="4.13.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="de.dlr.sc.virsat.tml.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.dlr.sc.virsat.model.ext.tml.behavioral.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="de.dlr.sc.virsat.model.ext.tml.configuration.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="de.dlr.sc.virsat.model.ext.tml.structural.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+</feature>

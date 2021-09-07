@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+ <extension
+       point="org.eclipse.ui.editors">
+    <editor
+          class="de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.taskingenv.TMLDiagramEditor"
+          contributorClass="org.eclipse.graphiti.ui.editor.DiagramEditorActionBarContributor"
+          default="true"
+          extensions="tmld"
+          id="de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.taskingenv.TMLStructuralEditor"
+          matchingStrategy="org.eclipse.graphiti.ui.editor.DiagramEditorMatchingStrategy"
+          name="TML Task Diagram">
+    </editor>
+ </extension>
+ <extension
+       point="org.eclipse.graphiti.ui.diagramTypes">
+    <diagramType
+          id="de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.taskingenv"
+          name="TML Task Diagram"
+          type="tmld">
+    </diagramType>
+ </extension>
+ <extension
+       point="org.eclipse.graphiti.ui.diagramTypeProviders">
+    <diagramTypeProvider
+          class="de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.taskingenv.providers.TMLDiagramTypeProvider"
+          context="org.eclipse.graphiti.ui.diagramEditor"
+          id="de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.taskingenv.TMLStructuralTypeProvider"
+          name="TML Task Diagram">
+       <diagramType
+             id="de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.taskingenv">
+       </diagramType>
+       <imageProvider
+			id="de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.TMLDiagramIconProvider">
+	   </imageProvider>
+    </diagramTypeProvider>
+ </extension>
+ <extension point="org.eclipse.graphiti.ui.imageProviders">
+	<imageProvider
+		class="de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.taskingenv.providers.TMLDiagramIconProvider"
+		id="de.dlr.sc.virsat.model.ext.tml.structural.ui.diagram.TMLDiagramIconProvider">
+	</imageProvider>
+ </extension>
+</plugin>
