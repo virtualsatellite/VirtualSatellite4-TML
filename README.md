@@ -1,4 +1,4 @@
-# Virtual Satellite 4 - Tasking Modeling Language IDE
+# Virtual Satellite 4 - Tasking Modeling Language Edition
 
 Model-Based Tool for Generation of Event-Driven Software based on Virtual Satellite 
 
@@ -40,11 +40,11 @@ A user manual is located in the repository under *manual/user_manual.pdf* and ca
 7. Inspect the build artifacts for the p2 repository in _de.dlr.sc.virsat.p2updatesite/target_
 
 
-## Jenkins CI and Releases
+## Github Actions and Releases
 
-Jenkins CI is set-up to start a build job for every branch and every new commit to the repository. It executes all relevant tests such as jUnit, Checkstyle, SpotBugs, etc. Making a successful pull-request into development requires all tests to pass.
+Github Actions is set-up to start a build job for every branch and every new commit to the repository. It executes all relevant tests such as jUnit, Checkstyle, SpotBugs, etc. Making a successful pull-request into development requires all tests to pass.
 
-Starting a Jenkins CI job on development or integration deploys all relevant artifacts.
+Starting a Github Actions job on development or integration deploys all relevant artifacts.
 
 
 ## License
