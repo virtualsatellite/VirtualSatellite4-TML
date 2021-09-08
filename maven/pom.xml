@@ -58,7 +58,7 @@
 		<profile>
 			<id>development</id>
 			<properties>
-				<target.platform.name>virsat_tml_development</target.platform.name>
+				<target.platform.name>virsat_tml_development_linux</target.platform.name>
 				<build.qualifier>'d'yyyyMMddHHmm</build.qualifier>
 				<build.folder.type>development</build.folder.type>
 				<build.file.win32>VirSat_TML_Development_Win32.zip</build.file.win32>
