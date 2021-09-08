@@ -20,35 +20,18 @@ SPDX-License-Identifier: EPL-2.0
 	<property name="m2.directory">${user.home}/.m2/</property>
 	<property environment="env"/>
 		
-	<!-- =====================================================
-		 Task: Setup Network Drives
-	     ===================================================== -->
-	<target name="setupNwDrives" >
-		<description>Connect the P and U drive for jenkins with injected credentials</description>
-		<echo>net use P: \\bsscfs01\Projects /user:${env.NW_USER} ${env.NW_PASS}</echo>
-		<echo>net use U: \\bsscfs01\Unsecured /user:${env.NW_USER} ${env.NW_PASS}</echo>
-		<exec executable="net">
-			<arg line="use P: \\bsscfs01\Projects /user:${env.NW_USER} ${env.NW_PASS}"/>
-		</exec>
-		<exec executable="net">
-			<arg line="use U: \\bsscfs01\Unsecured /user:${env.NW_USER} ${env.NW_PASS}"/>
-		</exec>
-		<exec executable="net">
-			<arg line="use"/>
-		</exec>
-	</target>
+	<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+			<classpath path="${user.home}/.ant/lib/jacoco.jar"/>
+		</taskdef>
 
-	<!-- =====================================================
-		 Task: tear Down Network Drives
-	     ===================================================== -->
-	<target name="tearDownNwDrives">
-		<description>Disconnect the P and U drive for jenkins </description>
-		<exec executable="net">
-			<arg line="use P: /Delete /Yes"/>
-		</exec>
-		<exec executable="net">
-			<arg line="use U: /Delete /Yes"/>
-		</exec>
+		<taskdef resource="net/sf/antcontrib/antlib.xml">
+			<classpath path="${user.home}/.ant/lib/ant-contrib.jar"/>
+	</taskdef>
+	
+	<target name="jacocoPrepareDependencies" description="Install Jacoco Dependencies">
+			<mkdir dir="${user.home}/.ant/lib"/>
+			<get dest="${user.home}/.ant/lib/jacoco.jar" src="https://repo1.maven.org/maven2/org/jacoco/org.jacoco.ant/0.8.5/org.jacoco.ant-0.8.5-nodeps.jar"/>
+			<get dest="${user.home}/.ant/lib/ant-contrib.jar" src="https://repo1.maven.org/maven2/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3.jar"/>
 	</target>
 	
 	<!-- =====================================================
