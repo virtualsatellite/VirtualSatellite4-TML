@@ -44,7 +44,7 @@
 				<module>de.dlr.sc.virsat.model.ext.tml.ui</module>
 				<module>de.dlr.sc.virsat.model.ext.tml.generator</module>
 				<module>de.dlr.sc.virsat.model.ext.tml.generator.tasking</module>
-				<module>de.dlr.sc.virsat.model.ext.tml.feature</module>
+				
 				
 				<module>de.dlr.sc.virsat.model.ext.tml.configuration</module>
 				<module>de.dlr.sc.virsat.model.ext.tml.configuration.test</module>
@@ -87,11 +87,20 @@
 		
 		
 				<module>de.dlr.sc.virsat.tml.branding.ui</module>
+				
+				
+				<module>de.dlr.sc.virsat.tml.test</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>deploy</id>
+			<modules>
+				<module>de.dlr.sc.virsat.model.ext.tml.feature</module>
 				<module>de.dlr.sc.virsat.tml.branding.feature</module>
 				<module>de.dlr.sc.virsat.tml.license.feature</module>
 				<module>de.dlr.sc.virsat.tml.docs.feature</module>
-				
-				<module>de.dlr.sc.virsat.tml.test</module>
+				<module>de.dlr.sc.virsat.tml.product</module>
+				<module>de.dlr.sc.virsat.tml.p2updatesite</module>
 			</modules>
 		</profile>
 	</profiles>
