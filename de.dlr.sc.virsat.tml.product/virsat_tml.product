@@ -116,12 +116,7 @@ Germany
       <feature id="org.eclipse.draw2d" installMode="root"/>
       <feature id="org.eclipse.egit" installMode="root"/>
       <feature id="org.eclipse.gef" installMode="root"/>
-      <feature id="org.eclipse.gef.source" installMode="root"/>
-      <feature id="org.eclipse.gmf.tooling" installMode="root"/>
       <feature id="org.eclipse.draw2d" installMode="root"/>
-      <feature id="org.eclipse.gmf.runtime.notation.sdk" installMode="root"/>
-      <feature id="org.eclipse.gef.sdk" installMode="root"/>
-      <feature id="org.eclipse.gmf.runtime.notation" installMode="root"/>
       <feature id="org.eclipse.egit" installMode="root"/>
       <feature id="org.eclipse.jgit" installMode="root"/>
       <feature id="org.eclipse.jgit.ssh.apache" installMode="root"/>
