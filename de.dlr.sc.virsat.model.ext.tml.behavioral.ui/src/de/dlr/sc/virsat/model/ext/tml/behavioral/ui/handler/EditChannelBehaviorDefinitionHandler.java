@@ -9,6 +9,8 @@
  *******************************************************************************/
 package de.dlr.sc.virsat.model.ext.tml.behavioral.ui.handler;
 
+import java.util.Arrays;
+
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
@@ -83,7 +85,7 @@ public class EditChannelBehaviorDefinitionHandler extends AbstractHandler implem
 			workbenchPage.openEditor(editorInput, ChannelDefinitionEditor.CHANNEL_DEFINITION_EDITOR_ID);
 		} catch (PartInitException ex) {
 			System.err.println(
-					"de.dlr.sc.virsat.model.ext.tml.structural.ui.handler: Part Init Exception" + ex.getStackTrace());
+					"de.dlr.sc.virsat.model.ext.tml.structural.ui.handler: Part Init Exception" + Arrays.toString(ex.getStackTrace()));
 		}
 	}
 

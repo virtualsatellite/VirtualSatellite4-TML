@@ -28,6 +28,8 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
 
+import java.util.Arrays;
+
 import de.dlr.sc.virsat.model.dvlm.categories.CategoryAssignment;
 import de.dlr.sc.virsat.model.dvlm.categories.propertyinstances.ArrayInstance;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.ui.editor.ChannelDefinitionEditor;
@@ -77,7 +79,7 @@ public class AddChannelBehaviorDefinitionHandler extends AbstractHandler impleme
 			workbenchPage.openEditor(editorInput, ChannelDefinitionEditor.CHANNEL_DEFINITION_EDITOR_ID);
 		} catch (PartInitException ex) {
 			System.err.println(
-					"de.dlr.sc.virsat.model.ext.tml.structural.ui.handler: Part Init Exception" + ex.getStackTrace());
+					"de.dlr.sc.virsat.model.ext.tml.structural.ui.handler: Part Init Exception" + Arrays.toString(ex.getStackTrace()));
 		}
 	}
 
