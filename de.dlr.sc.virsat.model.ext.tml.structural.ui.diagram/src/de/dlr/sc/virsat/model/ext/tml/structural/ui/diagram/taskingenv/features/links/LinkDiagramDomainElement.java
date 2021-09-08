@@ -73,8 +73,8 @@ public class LinkDiagramDomainElement {
 	 * @return True if source and destination of two links are same.
 	 */
 	public boolean isSame(LinkDiagramDomainElement link) {
-		return link.getSourceBean().getUuid() == sourceBean.getUuid() 
-				&& link.getTargetBean().getUuid() == targetBean.getUuid();
+		return link.getSourceBean().getUuid().equals(sourceBean.getUuid()) 
+				&& link.getTargetBean().getUuid().equals(targetBean.getUuid());
 	}
 	
 	/**
@@ -84,8 +84,8 @@ public class LinkDiagramDomainElement {
 	 * @return True if source and destination of two links are same.
 	 */
 	public boolean isSame(IBeanCategoryAssignment sourceBean, IBeanCategoryAssignment targetBean) {
-		return sourceBean.getUuid() == this.sourceBean.getUuid() 
-				&& targetBean.getUuid() == this.targetBean.getUuid();
+		return sourceBean.getUuid().equals(this.sourceBean.getUuid()) 
+				&& targetBean.getUuid().equals(this.targetBean.getUuid());
 	}
 	
 }
