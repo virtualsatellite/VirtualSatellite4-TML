@@ -13,7 +13,7 @@
 
 	<artifactId>de.dlr.sc.virsat.tml.target</artifactId>
 
-	<packaging>pom</packaging>
+	<packaging>eclipse-plugin</packaging>
 
 	<parent>
 		<artifactId>de.dlr.sc.virsat.tml.parent</artifactId>
