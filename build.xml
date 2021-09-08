@@ -98,18 +98,6 @@ SPDX-License-Identifier: EPL-2.0
 			</structure>
 			<html destdir="${projectDir}/target/jacocoreport" />
 			<xml destfile="${projectDir}/target/jacocoreport/jacoco.xml" encoding="UTF-8" />
-		    <check failonviolation="false">
-		        <rule element="BUNDLE">
-		        	<limit counter="INSTRUCTION" value="COVEREDRATIO" minimum="65%"/>
-		        	<limit counter="LINE" value="COVEREDRATIO" minimum="65%"/>
-		        	<limit counter="BRANCH" value="COVEREDRATIO" minimum="55%"/>
-		        	<limit counter="METHOD" value="COVEREDRATIO" minimum="65%"/>
-		                <limit counter="CLASS" value="COVEREDRATIO" minimum="80%"/>
-		        </rule>
-		        <rule element="METHOD">
-		        	<limit counter="COMPLEXITY" value="TOTALCOUNT" maximum="20"/>
-		        </rule>
-		    </check>
 		</jacoco:report>
 	</target>
 
