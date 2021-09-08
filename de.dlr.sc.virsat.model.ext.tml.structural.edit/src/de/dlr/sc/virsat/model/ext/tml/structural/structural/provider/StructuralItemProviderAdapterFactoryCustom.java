@@ -18,8 +18,6 @@ import org.eclipse.emf.common.notify.Adapter;
  */
 public class StructuralItemProviderAdapterFactoryCustom extends StructuralItemProviderAdapterFactory {
 
-	protected ChannelItemProviderCustom channelItemProvider;
-
 	/**
 	 * Get channel item adapter
 	 * - injects custom class
