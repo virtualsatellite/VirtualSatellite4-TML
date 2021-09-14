@@ -2,6 +2,13 @@
 
 Model-Based Tool for Generation of Event-Driven Software based on Virtual Satellite 
 
+## Project Status
+
+Status Development Build: [![Build Status](https://github.com/virtualsatellite/VirtualSatellite4-TML/workflows/Build/badge.svg?branch=development)]
+
+Status Integration Build: [![Build Status](https://github.com/virtualsatellite/VirtualSatellite4-TML/workflows/Build/badge.svg?branch=integration)]
+
+Status Release Build: [![Build Status](https://github.com/virtualsatellite/VirtualSatellite4-TML/workflows/Build/badge.svg?branch=master)]
 
 ## Purpose
 
@@ -28,7 +35,7 @@ Update Sites
 
 ## User Manual
 	
-A user manual is located in the repository under *manual/user_manual.pdf* and can be found on the [Releases](https://github.com/virtualsatellite/VirtualSatellite4-TML/releases) site.
+A user manual is located in the repository under *de.dlr.sc.virsat.tml.docs.feature/docs/user_manual.pdf* and can be found on the [Releases](https://github.com/virtualsatellite/VirtualSatellite4-TML/releases) site.
 
 
 ## Quickstart for developers

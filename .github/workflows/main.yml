@@ -286,7 +286,6 @@ jobs:
           path: |
             deploy/**/*.zip
             deploy/**/*.tar.gz
-            deploy/**/*.pdf
           retention-days: 3
      
       # ---------------------------------------------
