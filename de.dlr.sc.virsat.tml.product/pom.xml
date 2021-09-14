@@ -25,7 +25,6 @@
 	<name>de.dlr.sc.virsat.tml.product</name>
 
 	<properties>
-		<build.folder.application>VirSatTmlBinary</build.folder.application>
 		<build.folder.fullpath>${build.folder.target.bin}/${build.folder.application}/${build.folder.type}</build.folder.fullpath>
 		<build.file.win32.fullpath>${build.folder.target.bin}/${build.folder.application}/${build.folder.type}/${build.file.win32}</build.file.win32.fullpath>
 		<build.file.linux.fullpath>${build.folder.target.bin}/${build.folder.application}/${build.folder.type}/${build.file.linux}</build.file.linux.fullpath>

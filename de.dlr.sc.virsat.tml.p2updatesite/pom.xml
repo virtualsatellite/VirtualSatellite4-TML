@@ -23,7 +23,6 @@
 	<packaging>eclipse-repository</packaging>
 
 	<properties>
-		<build.folder.application>VirSat4_Tml_Application</build.folder.application>
 		<build.folder.fullpath>${build.folder.target.p2}/${build.folder.application}/${build.folder.type}</build.folder.fullpath>
 	</properties>
 
@@ -31,7 +30,6 @@
 		<profile>
 			<id>deploy</id>
 			<properties>
-				<build.folder.application>VirSat4_Core_Application</build.folder.application>
 				<build.folder.fullpath>${build.folder.target.p2}/${build.folder.application}/${build.folder.type}</build.folder.fullpath>
 			</properties>
 			<build>

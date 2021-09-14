@@ -286,6 +286,7 @@ jobs:
           path: |
             deploy/**/*.zip
             deploy/**/*.tar.gz
+            deploy/**/*.pdf
           retention-days: 3
      
       # ---------------------------------------------
@@ -307,7 +308,7 @@ jobs:
           build_profile: ${{ steps.build_decision.outputs.build_type }}
           openssl_pass: ${{ secrets.SF_SSH_KEY_OPENSSL_PASS }}
           ssh_key_pass: ${{ secrets.SF_SSH_KEY_PASS }}
-          local_dir: VirSat4_TML_Application
+          local_dir: VitualSatelliteTML
           remote_dir: virtualsatellite/VirtualSatellite4-TML
         if: ${{ steps.build_decision.outputs.deploy_type == 'deploy' }}
       
