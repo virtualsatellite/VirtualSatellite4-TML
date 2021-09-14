@@ -4,11 +4,11 @@ Model-Based Tool for Generation of Event-Driven Software based on Virtual Satell
 
 ## Project Status
 
-Status Development Build: [![Build Status](https://github.com/virtualsatellite/VirtualSatellite4-TML/workflows/Build/badge.svg?branch=development)]
+![Build Status](https://github.com/virtualsatellite/VirtualSatellite4-TML/workflows/Build/badge.svg?branch=development) Development
 
-Status Integration Build: [![Build Status](https://github.com/virtualsatellite/VirtualSatellite4-TML/workflows/Build/badge.svg?branch=integration)]
+![Build Status](https://github.com/virtualsatellite/VirtualSatellite4-TML/workflows/Build/badge.svg?branch=integration) Integration
 
-Status Release Build: [![Build Status](https://github.com/virtualsatellite/VirtualSatellite4-TML/workflows/Build/badge.svg?branch=master)]
+![Build Status](https://github.com/virtualsatellite/VirtualSatellite4-TML/workflows/Build/badge.svg?branch=master) Release
 
 ## Purpose
 
