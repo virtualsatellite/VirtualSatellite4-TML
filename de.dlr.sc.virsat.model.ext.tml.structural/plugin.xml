@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension point="de.dlr.sc.virsat.model.Concept">
+		<concept
+			id="de.dlr.sc.virsat.model.ext.tml.structural"
+			version="1.6"
+			xmi="concept/concept.xmi">
+		</concept>
+	</extension>
+	<extension point="de.dlr.sc.virsat.model.DvlmValidator">
+		<dvlmValidator>
+			<seiValidator
+				id="de.dlr.sc.virsat.model.ext.tml.structural"
+				class="de.dlr.sc.virsat.model.ext.tml.structural.validator.StructuralValidator">
+			</seiValidator>
+		</dvlmValidator>
+	</extension>
+	<extension point="de.dlr.sc.virsat.model.edit.ConceptTypeFactoryCaBeanRegistration">
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.TaskingDefinition"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.TaskingDefinition">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.TaskingEnvironment"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.TaskingEnvironment">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.IEventSource"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.IEventSource">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.IType"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.IType">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.TaskDefinition"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.TaskDefinition">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.TaskInputDefinition"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.TaskInputDefinition">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.TaskOutputDefinition"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.TaskOutputDefinition">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.BasicTypeDefinition"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.BasicTypeDefinition">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.ReferenceFrameDefinition"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.ReferenceFrameDefinition">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.UnitDefinition"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.UnitDefinition">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.TaskInstance"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.TaskInstance">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.TaskInput"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.TaskInput">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.TaskOutput"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.TaskOutput">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.TimeEvent"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.TimeEvent">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.Channel"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.Channel">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.DataType"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.DataType">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.ExternalType"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.ExternalType">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.Attribute"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.Attribute">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.ArrayDimension"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.ArrayDimension">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.Enumeration"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.Enumeration">
+		</CategoryAssignmentBean>
+		<CategoryAssignmentBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.EnumerationLiteral"
+			caBean="de.dlr.sc.virsat.model.ext.tml.structural.model.EnumerationLiteral">
+		</CategoryAssignmentBean>
+	</extension>
+	<extension point="de.dlr.sc.virsat.model.edit.ConceptTypeFactorySeiBeanRegistration">
+		<StructuralElementInstanceBean
+			id="de.dlr.sc.virsat.model.ext.tml.structural.TMLRoot"
+			seiBean="de.dlr.sc.virsat.model.ext.tml.structural.model.TMLRoot">
+		</StructuralElementInstanceBean>
+	</extension>
+	<!-- Plugin.XML Protected Region Start -->
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.extension.tml.structural"
+		version="1.0"
+		class="de.dlr.sc.virsat.model.ext.tml.structural.migrator.Migrator1v0"
+		xmi="concept/concept_v1_0.xmi">
+	</migrator>
+</extension>
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.ext.tml.structural"
+		version="1.0"
+		class="de.dlr.sc.virsat.model.ext.tml.structural.migrator.Migrator1v0"
+		xmi="concept/concept_v1_0.xmi">
+	</migrator>
+</extension>
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.ext.tml.structural"
+		version="1.1"
+		class="de.dlr.sc.virsat.model.ext.tml.structural.migrator.Migrator1v1"
+		xmi="concept/concept_v1_1.xmi">
+	</migrator>
+</extension>
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.ext.tml.structural"
+		version="1.2"
+		class="de.dlr.sc.virsat.model.ext.tml.structural.migrator.Migrator1v2"
+		xmi="concept/concept_v1_2.xmi">
+	</migrator>
+</extension>
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.ext.tml.structural"
+		version="1.3"
+		class="de.dlr.sc.virsat.model.ext.tml.structural.migrator.Migrator1v3"
+		xmi="concept/concept_v1_3.xmi">
+	</migrator>
+</extension>
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.ext.tml.structural"
+		version="1.4"
+		class="de.dlr.sc.virsat.model.ext.tml.structural.migrator.Migrator1v4"
+		xmi="concept/concept_v1_4.xmi">
+	</migrator>
+</extension>
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.ext.tml.structural"
+		version="1.5"
+		class="de.dlr.sc.virsat.model.ext.tml.structural.migrator.Migrator1v5"
+		xmi="concept/concept_v1_5.xmi">
+	</migrator>
+</extension>
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.ext.tml.structural"
+		version="1.6"
+		class="de.dlr.sc.virsat.model.ext.tml.structural.migrator.Migrator1v6"
+		xmi="concept/concept_v1_6.xmi">
+	</migrator>
+</extension>
+	<!-- Plugin.XML Protected Region End -->
+	<!-- Plugin.XML Protected Region Start -->
+<extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated concept -->
+      <package
+            uri="http://www.virsat.sc.dlr.de/dmf/v1.6/structural"
+            class="de.dlr.sc.virsat.model.ext.tml.structural.structural.StructuralPackage"
+            genModel="concept/concept.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated concept -->
+      <parser
+            type="structural"
+            class="de.dlr.sc.virsat.model.ext.tml.structural.structural.util.StructuralResourceFactoryImpl"/>
+   </extension>
+	<!-- Plugin.XML Protected Region End -->
+</plugin>

@@ -1,0 +1,165 @@
+Concept de.dlr.sc.virsat.model.ext.tml.behavioral displayname 'Tasking Behavior' hasDMF description "Example Concept for Interface Architecture" version 1.1
+{
+	
+//	Import de.dlr.sc.virsat.model.extension.tml.structural.*;
+	
+	/*
+	 * Behavior instances are specified by a textual DSLs
+	 */
+	 
+	 /*
+	 * Attribute definition for parameters of behavioral definitions
+	 */
+	Category BehavioralParameterDefinition description "Attribute definition for parameters of behavioral definitions"{
+		
+		BooleanProperty isStatic;
+		
+		//name
+		EnumProperty valueType  values [INTEGER=1, FLOAT=2, STRING=3];
+		
+		StringProperty value;
+		//type ENUM
+	}
+	 
+	 
+	 /*
+	 * Category to specify channel behavior
+	 * -> how are data stored?
+	 */
+	Category ChannelBehaviorDefinition extends BehaviorDefinition description "Category to specify channel behavior"{
+		/*
+		 * Description how to store the data in the Channel - and the storage types parameters: classifier
+		 * 
+		 * Transformation rules: how data can be converted into each other
+		 */
+		 
+		 /*
+		 * Optional element that can be used to specify how data are stored in the channel
+		 * Options: DOUBLE_BUFFER, FIFO, LIFO, EVENT_ONLY
+		 * Setting this property allows code generation for channel access 
+		 */
+		EnumProperty storageType  values [DOUBLE_BUFFER=1, FIFO=2, LIFO=3, EVENT_ONLY=4, CUSTOM=5] description "Optional element that can be used to specify how data are stored in the channel";
+		
+		/*
+		 * Name of the implementation in the target language
+		 */
+		StringProperty implName description "Name of the implementation in the target language";
+		
+		/*
+		 * Serialized definition of textual DSL
+		 */
+		StringProperty serializedDefinition description "Serialized definition of textual DSL";
+		
+	}
+	 
+	 
+	/*
+	 * Overall Container for Behavior Definitions, which can then be used in the textual DSLs
+	 */
+	Category BehaviorDefintionStorage description "Overall Container for Behavior Definitions"{
+		
+		Type channelBehaviorDefintions[] of Category ChannelBehaviorDefinition;
+		
+	}
+	
+	/*
+	* ######### START - Abstract Categories  #########
+	*/
+	
+	/*
+	 * Super concept for all behavioral categories
+	 */
+	Category BehaviorDefinition description "Super concept for all behavioral categories" {
+		
+		Type parameters[] of Category BehavioralParameterDefinition;
+		
+	}
+	/*
+	* ######### START - Abstract Categories  #########
+	*/
+	
+	
+	
+	/*
+	 * ##### START - Categories for element definition #######
+	 */
+	 
+	
+	
+	
+	/*
+	 * Category to specify TimeEvent behavior
+	 *  -> when are events send? 
+	 */
+	Category TimeEventBehaviorDefinition description "Category to specify TimeEvent behavior"{
+		/*
+		 * Specification of time-based behavior to trigger events
+		 * 
+		 */
+	}
+	
+	
+	/*
+	 * ##### END - Categories for element definition #######
+	 */
+	 
+	 
+	 /*
+	 * ####### Start - Categories for element instances ##########
+	 */
+	 
+	 /*
+	  * Description of a task behavior
+	  */
+	 Category TaskBehavior description "Description of a task behavior"{
+	 	/*
+		 * Mapping of input parameters to C++-TaskInputs and output properties to formal description for Task-Contracts
+		 */
+		 
+	 	/*
+	 	 * TODO: Add elements for textual language 	
+	 	 * Something like:
+	 	 * 
+	 	 * 	Example:
+	 	 * 
+	 	 * 		execute( imageInput(30) & navStateInput(1) && !errorInput, avTime = 20, maxTime = 30)=> craterListOut(10) 
+	 	 * 			|| execute( navStateInput(5) &&  !errorInput, avTime = 1, maxTime = 5)=> errorLogOut(1)
+	 	 * 			|| execute( errorInput, avTime = 1) => errorLogOut(1)
+	 	 * 
+	 	 *  	execute(<InputExpression>, <ExecutionParameters>?) (=> <OutputEpression> ( <ExpectedOutputNUmber> ) )? 	
+	 	 * 		
+	 	 */
+	 }
+	 
+	  /*
+	  * Instance of a behavioral parameter definition
+	  */
+	 Category BehaviorParameter description "Instance of a behavioral parameter definition"{
+	 	
+	 	Reference typeOf of Type BehavioralParameterDefinition;
+	 	
+	 	//TODO implement parsers in java bean
+	 	//TODO implement validation by checking definition
+	 	StringProperty value;
+	 	
+	 }
+	 
+	 /*
+	  * Instance of a channel behavior definition
+	  */
+	 Category ChannelBehavior description "Instance of a channel behavior definition"{
+	 	
+	 	Reference typeOf of Type ChannelBehaviorDefinition;
+	 	
+	 	//TODO: automatically create instances of parameters with the editor
+	 	Type parameterInstances[] of Category BehaviorParameter;
+	 	
+	 }
+	 
+
+	 
+	 /*
+	 * ####### END - Categories for element instances ##########
+	 */
+}
+

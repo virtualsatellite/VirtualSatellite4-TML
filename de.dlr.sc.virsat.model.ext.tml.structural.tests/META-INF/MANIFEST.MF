@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: VirSat Model Extension Concept Structural Tests
+Bundle-SymbolicName: de.dlr.sc.virsat.model.ext.tml.structural.tests;singleton:=true
+Automatic-Module-Name: de.dlr.sc.virsat.model.ext.tml.structural.tests
+Bundle-Version: 4.13.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: DLR (German Aerospace Center)
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.dlr.sc.virsat.model.ext.tml.structural.structural.tests
+Require-Bundle: org.eclipse.core.runtime,
+ de.dlr.sc.virsat.model.ext.tml.structural;visibility:=reexport,
+ de.dlr.sc.virsat.model;visibility:=reexport,
+ de.dlr.sc.virsat.model.ext.core;visibility:=reexport,
+ de.dlr.sc.virsat.model.ext.tml.behavioral;visibility:=reexport,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.junit;visibility:=reexport
+Bundle-ActivationPolicy: lazy

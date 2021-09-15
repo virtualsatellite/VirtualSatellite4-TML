@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2008-2021 German Aerospace Center (DLR), Simulation and Software Technology, Germany.&#xD;&#xA;&#xD;&#xA;This program and the accompanying materials are made available under the&#xD;&#xA;terms of the Eclipse Public License 2.0 which is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-2.0.&#xD;&#xA;&#xD;&#xA;SPDX-License-Identifier: EPL-2.0"
+    modelDirectory="/de.dlr.sc.virsat.model.ext.tml.behavioral/src-dmf" editDirectory="/de.dlr.sc.virsat.model.ext.tml.behavioral.edit/src-dmf"
+    editorDirectory="/de.dlr.sc.virsat.model.ext.tml.behavioral.editor/src-dmf" modelPluginID="de.dlr.sc.virsat.model.ext.tml.behavioral"
+    modelName="Concept" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="/de.dlr.sc.virsat.model.ext.tml.behavioral.tests/src-dmf" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../de.dlr.sc.virsat.model/model/dvlm.genmodel#//dvlm ../../de.dlr.sc.virsat.model.ext.core/concept/concept.genmodel#//core ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>/de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.ecore</foreignModel>
+  <genPackages prefix="Behavioral" basePackage="de.dlr.sc.virsat.model.ext.tml.behavioral"
+      resource="XMI" disposableProviderFactory="true" ecorePackage="concept.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="concept.ecore#//EnumValueType">
+      <genEnumLiterals ecoreEnumLiteral="concept.ecore#//EnumValueType/INTEGER"/>
+      <genEnumLiterals ecoreEnumLiteral="concept.ecore#//EnumValueType/FLOAT"/>
+      <genEnumLiterals ecoreEnumLiteral="concept.ecore#//EnumValueType/STRING"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="concept.ecore#//EnumStorageType">
+      <genEnumLiterals ecoreEnumLiteral="concept.ecore#//EnumStorageType/DOUBLE_BUFFER"/>
+      <genEnumLiterals ecoreEnumLiteral="concept.ecore#//EnumStorageType/FIFO"/>
+      <genEnumLiterals ecoreEnumLiteral="concept.ecore#//EnumStorageType/LIFO"/>
+      <genEnumLiterals ecoreEnumLiteral="concept.ecore#//EnumStorageType/EVENT_ONLY"/>
+      <genEnumLiterals ecoreEnumLiteral="concept.ecore#//EnumStorageType/CUSTOM"/>
+    </genEnums>
+    <genClasses ecoreClass="concept.ecore#//BehavioralParameterDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//BehavioralParameterDefinition/isStatic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//BehavioralParameterDefinition/valueType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//BehavioralParameterDefinition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="concept.ecore#//ChannelBehaviorDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//ChannelBehaviorDefinition/storageType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//ChannelBehaviorDefinition/implName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//ChannelBehaviorDefinition/serializedDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="concept.ecore#//BehaviorDefintionStorage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concept.ecore#//BehaviorDefintionStorage/channelBehaviorDefintions"/>
+    </genClasses>
+    <genClasses ecoreClass="concept.ecore#//BehaviorDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concept.ecore#//BehaviorDefinition/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="concept.ecore#//TimeEventBehaviorDefinition"/>
+    <genClasses ecoreClass="concept.ecore#//TaskBehavior"/>
+    <genClasses ecoreClass="concept.ecore#//BehaviorParameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concept.ecore#//BehaviorParameter/typeOf"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//BehaviorParameter/value"/>
+    </genClasses>
+    <genClasses ecoreClass="concept.ecore#//ChannelBehavior">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concept.ecore#//ChannelBehavior/typeOf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concept.ecore#//ChannelBehavior/parameterInstances"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Generator
+Bundle-SymbolicName: de.dlr.sc.virsat.model.ext.tml.generator;singleton:=true
+Bundle-Version: 4.13.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ de.dlr.sc.virsat.model.ext.tml,
+ de.dlr.sc.virsat.model.ext.tml.configuration,
+ de.dlr.sc.virsat.model.ext.tml.behavioral,
+ de.dlr.sc.virsat.model.ext.tml.structural,
+ de.dlr.sc.virsat.project,
+ de.dlr.sc.virsat.model.edit
+Export-Package: de.dlr.sc.virsat.model.ext.tml.generator,
+ de.dlr.sc.virsat.model.ext.tml.generator.impl,
+ de.dlr.sc.virsat.model.ext.tml.generator.templates,
+ de.dlr.sc.virsat.model.ext.tml.generator.templates.source,
+ de.dlr.sc.virsat.model.ext.tml.generator.templates.source.buildscript,
+ de.dlr.sc.virsat.model.ext.tml.generator.templates.source.config,
+ de.dlr.sc.virsat.model.ext.tml.generator.templates.source.cpp,
+ de.dlr.sc.virsat.model.ext.tml.generator.templates.source.cpp.test
+Automatic-Module-Name: de.dlr.sc.virsat.model.ext.tml.generator
+

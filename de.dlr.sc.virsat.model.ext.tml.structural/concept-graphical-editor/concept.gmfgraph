@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="structural">
+  <figures name="Default">
+    <descriptors name="TaskInstanceFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TaskInstanceFigure">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="18" green="158" blue="8"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="204" green="229" blue="255"/>
+        <preferredSize dx="150" dy="150"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TaskInstanceLabelFigure" text="TaskInstance"/>
+      </actualFigure>
+      <accessors accessor="getFigureTaskInstanceLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TaskInputFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TaskInputFigure">
+        <preferredSize dx="20" dy="20"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="TaskInputLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TaskInputLabelFigure" text="TaskInput"/>
+    </descriptors>
+    <descriptors name="TaskOutputFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TaskOutputFigure">
+        <preferredSize dx="20" dy="20"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="TaskOutputLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TaskOutputLabelFigure" text="TaskOutput"/>
+    </descriptors>
+    <descriptors name="TimeEventFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TimeEventFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" green="128"/>
+        <preferredSize dx="40" dy="20"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="TimeEventLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TimeEventLabelFigure" text="TimeEvent"/>
+    </descriptors>
+    <descriptors name="ChannelFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ChannelFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" green="128"/>
+        <preferredSize dx="40" dy="20"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="ChannelLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ChannelLabelFigure" text="Channel"/>
+    </descriptors>
+    <descriptors name="IEventSourceInputsFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="IEventSourceInputsFigure" lineKind="LINE_DASH"/>
+    </descriptors>
+    <descriptors name="IEventSourceInputsExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="IEventSourceInputsExternalLabel"/>
+    </descriptors>
+    <descriptors name="TaskOutputChannelsFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TaskOutputChannelsFigure" lineKind="LINE_DASH"/>
+    </descriptors>
+    <descriptors name="TaskOutputChannelsExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TaskOutputChannelsExternalLabel"/>
+    </descriptors>
+  </figures>
+  <nodes name="TaskInstance" figure="TaskInstanceFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="150" dy="150"/>
+    </facets>
+  </nodes>
+  <nodes name="TaskInput" figure="TaskInputFigure" affixedParentSide="NORTH">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="20" dy="20"/>
+    </facets>
+  </nodes>
+  <nodes name="TaskOutput" figure="TaskOutputFigure" affixedParentSide="NORTH">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="20" dy="20"/>
+    </facets>
+  </nodes>
+  <nodes name="TimeEvent" figure="TimeEventFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="40" dy="20"/>
+    </facets>
+  </nodes>
+  <nodes name="Channel" figure="ChannelFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="40" dy="20"/>
+    </facets>
+  </nodes>
+  <connections name="IEventSourceInputs" figure="IEventSourceInputsFigure"/>
+  <connections name="TaskOutputChannels" figure="TaskOutputChannelsFigure"/>
+  <labels name="TaskInstanceLabel" figure="TaskInstanceFigure" elementIcon="false" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="TaskInputLabel" figure="TaskInputLabelFigure" elementIcon="false"/>
+  <labels name="TaskOutputLabel" figure="TaskOutputLabelFigure" elementIcon="false"/>
+  <labels name="TimeEventLabel" figure="TimeEventLabelFigure" elementIcon="false"/>
+  <labels name="ChannelLabel" figure="ChannelLabelFigure" elementIcon="false"/>
+  <labels name="IEventSourceInputsExternalLabel" figure="IEventSourceInputsExternalLabelFigure" elementIcon="false"/>
+  <labels name="TaskOutputChannelsExternalLabel" figure="TaskOutputChannelsExternalLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>

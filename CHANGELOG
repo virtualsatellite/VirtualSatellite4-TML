@@ -1,0 +1,17 @@
+Version 4.9.5
+
+- Integration of general TML features from TML 1.0
+
+Version 4.9.1
+
+- Bug fixes
+- Generic code generator
+- Generated build system
+- Validation of connections in diagrams
+
+Version 4.10.0
+
+ - TML branding of the software
+ - Better linux support
+ - Generated C++ unit test
+ - Improved UI

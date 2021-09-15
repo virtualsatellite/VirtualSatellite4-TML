@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dvlm_c:Concept xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dvlm_c="http://www.virsat.sc.dlr.de/dvlm/v4/c" xmlns:dvlm_cppd="http://www.virsat.sc.dlr.de/dvlm/v4/cp/cppd" name="de.dlr.sc.virsat.model.ext.tml.structural" description="Example Concept for Interface Architecture" version="1.1" DMF="true">
+  <imports importedNamespace="de.dlr.sc.virsat.model.extension.ps.*"/>
+  <imports importedNamespace="de.dlr.sc.virsat.model.ext.tml.behavioral.*"/>
+  <categories name="TaskingEnvironment" description="Overall Container to describe a task model">
+    <applicableFor href="platform:/resource/de.dlr.sc.virsat.model.extension.ps/concept.concept#de.dlr.sc.virsat.model.extension.ps.ElementDefinition"/>
+    <applicableFor href="platform:/resource/de.dlr.sc.virsat.model.extension.ps/concept.concept#de.dlr.sc.virsat.model.extension.ps.ElementConfiguration"/>
+    <applicableFor href="platform:/resource/de.dlr.sc.virsat.model.extension.ps/concept.concept#de.dlr.sc.virsat.model.extension.ps.ElementOccurence"/>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="taskDefinitions" type="de.dlr.sc.virsat.model.ext.tml.structural.TaskDefinition">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="basicTypeDefinitions" type="de.dlr.sc.virsat.model.ext.tml.structural.BasicTypeDefinition">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="referenceFrames" type="de.dlr.sc.virsat.model.ext.tml.structural.ReferenceFrameDefinition">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="units" type="de.dlr.sc.virsat.model.ext.tml.structural.UnitDefinition">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="channelBehaviorDefinitions">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+      <type href="platform:/resource/de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.concept#de.dlr.sc.virsat.model.ext.tml.behavioral.ChannelBehaviorDefinition"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="tasks" type="de.dlr.sc.virsat.model.ext.tml.structural.TaskInstance">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="channels" type="de.dlr.sc.virsat.model.ext.tml.structural.Channel">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="timeEvents" type="de.dlr.sc.virsat.model.ext.tml.structural.TimeEvent">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="dataTypes" type="de.dlr.sc.virsat.model.ext.tml.structural.DataType">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="enumerations" type="de.dlr.sc.virsat.model.ext.tml.structural.Enumeration">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="globalParameters" type="de.dlr.sc.virsat.model.ext.tml.structural.Attribute">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+  </categories>
+  <categories name="IEventSource" description="Interface for all kinds of event sources">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="inputs" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.TaskInput">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+  </categories>
+  <categories name="IType" description="Interface for all kinds of types"/>
+  <categories name="TaskDefinition" description="Pure definition and specification of a task">
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="inputs" description="Definitions of task inputs" type="de.dlr.sc.virsat.model.ext.tml.structural.TaskInputDefinition">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="outputs" description="Definitions of task outputs " type="de.dlr.sc.virsat.model.ext.tml.structural.TaskOutputDefinition">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="parameters" description="Definition of task parameters" type="de.dlr.sc.virsat.model.ext.tml.structural.Attribute">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="serializedDefinition" description="Serialized definition of textual DSL"/>
+  </categories>
+  <categories name="TaskInputDefinition" description="Pure definition of a task input, specifying incoming data and events">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="dataType" description="Data type of task input. May be NULL if only event is relevant" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.DataType"/>
+  </categories>
+  <categories name="TaskOutputDefinition" description="Pure definition of a task output, specifying outgoing data and events">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="dataType" description="Data type of task output. May be NULL if only event is relevant" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.DataType"/>
+  </categories>
+  <categories name="BasicTypeDefinition" description="Definition of basic attribute types, that can be used to create data type" extendsCategory="de.dlr.sc.virsat.model.ext.tml.structural.IType">
+    <properties xsi:type="dvlm_cppd:EnumProperty" name="valueType" description="Optional element that can be used to specify which kind of value is stored in an attribute of this type">
+      <values name="INTEGER" value="1"/>
+      <values name="FLOAT" value="2"/>
+      <values name="STRING" value="3"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:IntProperty" name="size" description="Size of type, may be used for serialization"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="source" description="Source of the type, used for includes in the aimed language"/>
+    <properties xsi:type="dvlm_cppd:BooleanProperty" name="customSource" description="Source of the type, used for includes in the aimed language" defaultValue="false"/>
+  </categories>
+  <categories name="ReferenceFrameDefinition" description="Definition of reference frame, that can be used by attributes"/>
+  <categories name="UnitDefinition" description="Definition of units, that can be used by attributes"/>
+  <categories name="TaskInstance" description="Instance of a TaskDefinition, contains a behavior that can configure inputs and outputs">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="typeOf" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.TaskDefinition"/>
+    <properties xsi:type="dvlm_cppd:IntProperty" name="priority"/>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="taskBehavior">
+      <type href="platform:/resource/de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.concept#de.dlr.sc.virsat.model.ext.tml.behavioral.TaskBehavior"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="outputs" type="de.dlr.sc.virsat.model.ext.tml.structural.TaskOutput">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="inputs" type="de.dlr.sc.virsat.model.ext.tml.structural.TaskInput">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+  </categories>
+  <categories name="TaskInput" description="Instance of a TaskInputDefintion of the containing task, specifies where data or events are coming from">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="typeOf" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.TaskInputDefinition"/>
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="trigger" description="Source of event triggering the containing task (->Event or Channel)" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.IEventSource"/>
+    <properties xsi:type="dvlm_cppd:IntProperty" name="activationThreshold" defaultValue="0"/>
+    <properties xsi:type="dvlm_cppd:BooleanProperty" name="isFinal" defaultValue="false"/>
+  </categories>
+  <categories name="TaskOutput" description="Instance of a TaskInputDefintion of the containing task, specifies where data or events are going to">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="typeOf" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.TaskOutputDefinition"/>
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="channels" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.Channel">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+  </categories>
+  <categories name="TimeEvent" description="Source of time-based events send to tasks" extendsCategory="de.dlr.sc.virsat.model.ext.tml.structural.IEventSource">
+    <properties xsi:type="dvlm_cppd:IntProperty" name="period"/>
+    <properties xsi:type="dvlm_cppd:IntProperty" name="offset"/>
+  </categories>
+  <categories name="Channel" description="Data container - can specified as target or goal of tasks" extendsCategory="de.dlr.sc.virsat.model.ext.tml.structural.IEventSource">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="dataType" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.DataType"/>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="channelBehavior">
+      <type href="platform:/resource/de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.concept#de.dlr.sc.virsat.model.ext.tml.behavioral.ChannelBehavior"/>
+    </properties>
+  </categories>
+  <categories name="DataType" description="Data type - describing a set of data" extendsCategory="de.dlr.sc.virsat.model.ext.tml.structural.IType">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="superType" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.DataType"/>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="attributes" type="de.dlr.sc.virsat.model.ext.tml.structural.Attribute">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:BooleanProperty" name="abstractType" defaultValue="false"/>
+    <properties xsi:type="dvlm_cppd:BooleanProperty" name="extendsDataPackage" defaultValue="false"/>
+    <properties xsi:type="dvlm_cppd:BooleanProperty" name="isTMType" defaultValue="false"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="serializedDefinition" description="Serialized definition of textual DSL"/>
+  </categories>
+  <categories name="Attribute" description="Attribute that is contained in a classifier and is typed">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="typeOf" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.IType"/>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="dimensions" type="de.dlr.sc.virsat.model.ext.tml.structural.ArrayDimension">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="referenceFrame" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.ReferenceFrameDefinition"/>
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="typeUnit" referenceType="de.dlr.sc.virsat.model.ext.tml.structural.UnitDefinition"/>
+    <properties xsi:type="dvlm_cppd:BooleanProperty" name="isConst" defaultValue="false"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="valueLiteral"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="maxValueLiteral"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="minValueLiteral"/>
+  </categories>
+  <categories name="ArrayDimension" description="Specifying a array dimension with a fixed size">
+    <properties xsi:type="dvlm_cppd:IntProperty" name="size"/>
+  </categories>
+  <categories name="Enumeration" extendsCategory="de.dlr.sc.virsat.model.ext.tml.structural.IType">
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="literals" type="de.dlr.sc.virsat.model.ext.tml.structural.EnumerationLiteral">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="serializedDefinition" description="Serialized definition of textual DSL"/>
+  </categories>
+  <categories name="EnumerationLiteral">
+    <properties xsi:type="dvlm_cppd:IntProperty" name="keyNum"/>
+  </categories>
+</dvlm_c:Concept>

@@ -1,0 +1,17 @@
+
+
+"Start preparing genmodel...".println();
+
+
+var genModel := GenModel!GenModel.all.first;
+genModel.editDirectory = "/de.dlr.sc.virsat.model.ext.tml.structural.edit/src-dmf";
+genModel.editorDirectory = "/de.dlr.sc.virsat.model.ext.tml.structural.editor/src-gen";
+genModel.modelDirectory = "/de.dlr.sc.virsat.model.ext.tml.structural/src-dmf";
+genModel.modelPluginID = "de.dlr.sc.virsat.model.ext.tml.structural";
+genModel.editPluginID = "de.dlr.sc.virsat.model.ext.tml.structural.edit";
+genModel.editorPluginID = "de.dlr.sc.virsat.model.ext.tml.structural.editor";
+var genPackage := GenModel!GenPackage.all.first;
+genPackage.basePackage = "de.dlr.sc.virsat.model.ext.tml.structural";
+
+"Finished preparing genmodel...".println();
+

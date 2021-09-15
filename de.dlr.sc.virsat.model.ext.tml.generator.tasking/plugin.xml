@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="de.dlr.sc.virsat.model.ext.tml.generator.tasking.v2"
+         name="Tasking_2"
+         point="de.dlr.sc.virsat.model.ext.tml.generator">
+      <buildScriptTemplateProvider
+            class="de.dlr.sc.virsat.model.ext.tml.generator.tasking.impl.BuildScriptTemplateProvider">
+      </buildScriptTemplateProvider>
+      <sourceTemplateProvider
+            class="de.dlr.sc.virsat.model.ext.tml.generator.tasking.impl.CppSourceTemplateProvider">
+      </sourceTemplateProvider>
+      <configFileTemplateProvider
+            class="de.dlr.sc.virsat.model.ext.tml.generator.tasking.impl.ConfigFileTemplateProvider">
+      </configFileTemplateProvider>
+      <testTemplateProvider
+            class="de.dlr.sc.virsat.model.ext.tml.generator.tasking.impl.TestTemplateProvider">
+      </testTemplateProvider>
+   </extension>
+   <extension
+         id="de.dlr.sc.virsat.model.ext.tml.generator.tasking.v3"
+         name="Tasking_3"
+         point="de.dlr.sc.virsat.model.ext.tml.generator">
+      <buildScriptTemplateProvider
+            class="de.dlr.sc.virsat.model.ext.tml.generator.tasking.impl.BuildScriptTemplateProvider">
+      </buildScriptTemplateProvider>
+      <sourceTemplateProvider
+            class="de.dlr.sc.virsat.model.ext.tml.generator.tasking3.impl.CppTasking3SourceTemplateProvider">
+      </sourceTemplateProvider>
+      <configFileTemplateProvider
+            class="de.dlr.sc.virsat.model.ext.tml.generator.tasking.impl.ConfigFileTemplateProvider">
+      </configFileTemplateProvider>
+      <testTemplateProvider
+            class="de.dlr.sc.virsat.model.ext.tml.generator.tasking.impl.TestTemplateProvider">
+      </testTemplateProvider>
+   </extension>
+
+</plugin>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2008-2021 German Aerospace Center (DLR), Simulation and Software Technology, Germany.&#xD;&#xA;&#xD;&#xA;This program and the accompanying materials are made available under the&#xD;&#xA;terms of the Eclipse Public License 2.0 which is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-2.0.&#xD;&#xA;&#xD;&#xA;SPDX-License-Identifier: EPL-2.0"
+    modelDirectory="/de.dlr.sc.virsat.model.ext.tml.configuration/src-dmf" editDirectory="/de.dlr.sc.virsat.model.ext.tml.configuration.edit/src-dmf"
+    editorDirectory="/de.dlr.sc.virsat.model.ext.tml.configuration.editor/src-dmf"
+    modelPluginID="de.dlr.sc.virsat.model.ext.tml.configuration" modelName="Concept"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" testsDirectory="/de.dlr.sc.virsat.model.ext.tml.configuration.tests/src-dmf"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../de.dlr.sc.virsat.model/model/dvlm.genmodel#//dvlm ../../de.dlr.sc.virsat.model.ext.core/concept/concept.genmodel#//core ../../de.dlr.sc.virsat.model.ext.tml.structural/concept/concept.genmodel#//structural ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.genmodel#//behavioral"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>/de.dlr.sc.virsat.model.ext.tml.configuration/concept/concept.ecore</foreignModel>
+  <genPackages prefix="Configuration" basePackage="de.dlr.sc.virsat.model.ext.tml.configuration"
+      resource="XMI" disposableProviderFactory="true" ecorePackage="concept.ecore#/">
+    <genClasses ecoreClass="concept.ecore#//TMLConfiguration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concept.ecore#//TMLConfiguration/generatorConfiguration"/>
+    </genClasses>
+    <genClasses ecoreClass="concept.ecore#//GenerationConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//GenerationConfiguration/generationPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//GenerationConfiguration/srcGenPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//GenerationConfiguration/srcPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//GenerationConfiguration/buildGenPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//GenerationConfiguration/testPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//GenerationConfiguration/taskDefinitionFolder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//GenerationConfiguration/channelDefinitionFolder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//GenerationConfiguration/typeDefinitionFolder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//GenerationConfiguration/contribFolder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//GenerationConfiguration/libconfigFolder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//GenerationConfiguration/taskingVersion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concept.ecore#//GenerationConfiguration/taskingEnvironmentConfiguration"/>
+    </genClasses>
+    <genClasses ecoreClass="concept.ecore#//ElementConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concept.ecore#//ElementConfiguration/implementationName"/>
+    </genClasses>
+    <genClasses ecoreClass="concept.ecore#//TaskingEnvironmentConfiguration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concept.ecore#//TaskingEnvironmentConfiguration/domainElement"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

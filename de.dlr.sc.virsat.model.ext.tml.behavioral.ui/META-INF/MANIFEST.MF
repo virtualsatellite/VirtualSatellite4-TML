@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: VirSat Model Extension TML Behavioral UI
+Bundle-SymbolicName: de.dlr.sc.virsat.model.ext.tml.behavioral.ui;singleton:=true
+Bundle-Version: 4.13.0.qualifier
+Require-Bundle: de.dlr.sc.virsat.model.ext.tml.behavioral,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.expressions,
+ org.eclipse.emf.edit,
+ org.eclipse.emf.transaction,
+ org.eclipse.core.resources,
+ de.dlr.sc.virsat.model,
+ de.dlr.sc.virsat.project,
+ de.dlr.sc.virsat.project.ui,
+ de.dlr.sc.virsat.uiengine.ui,
+ de.dlr.sc.virsat.model.ext.tml.structural;bundle-version="0.0.1",
+ de.dlr.sc.virsat.model.ext.tml;bundle-version="1.0.0",
+ de.dlr.sc.virsat.model.ext.tml.ui;bundle-version="1.0.0",
+ de.dlr.sc.virsat.model.ext.tml.behavioral.channeldefinition.ui;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: DLR (German Aerospace Center)
+Automatic-Module-Name: de.dlr.sc.virsat.model.ext.tml.behavioral.ui

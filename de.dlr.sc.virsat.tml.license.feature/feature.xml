@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.dlr.sc.virsat.tml.license.feature"
+      label="VirSat Tasking Modeling Language License Feature"
+      version="4.13.0.qualifier"
+      provider-name="DLR (German Aerospace Center)">
+
+   <description>
+      License Feature
+for the Eclipse Feature Based Template Project
+German Aerospace Center (DLR e.V.)
+Simulation and Software Technology
+   </description>
+
+   <copyright>
+      Copyright 2018
+by German Aerospace Center (DLR e.V.)
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+</feature>

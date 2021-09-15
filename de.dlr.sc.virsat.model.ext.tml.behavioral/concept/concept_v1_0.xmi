@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dvlm_c:Concept xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dvlm_c="http://www.virsat.sc.dlr.de/dvlm/v6/c" xmlns:dvlm_cppd="http://www.virsat.sc.dlr.de/dvlm/v6/cp/cppd" name="de.dlr.sc.virsat.model.ext.tml.behavioral" description="Example Concept for Interface Architecture" DMF="true">
+  <categories name="BehavioralParameterDefinition" description="Attribute definition for parameters of behavioral definitions">
+    <properties xsi:type="dvlm_cppd:EnumProperty" name="valueType">
+      <values name="INTEGER" value="1"/>
+      <values name="FLOAT" value="2"/>
+      <values name="STRING" value="3"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="value"/>
+  </categories>
+  <categories name="ChannelBehaviorDefinition" description="Category to specify channel behavior" extendsCategory="de.dlr.sc.virsat.model.ext.tml.behavioral.BehaviorDefinition">
+    <properties xsi:type="dvlm_cppd:EnumProperty" name="storageType" description="Optional element that can be used to specify how data are stored in the channel">
+      <values name="DOUBLE_BUFFER" value="1"/>
+      <values name="FIFO" value="2"/>
+      <values name="LIFO" value="3"/>
+      <values name="EVENT_ONLY" value="4"/>
+      <values name="CUSTOM" value="5"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="implName" description="Name of the implementation in the target language"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="serializedDefinition" description="Serialized definition of textual DSL"/>
+  </categories>
+  <categories name="BehaviorDefintionStorage" description="Overall Container for Behavior Definitions">
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="channelBehaviorDefintions" type="de.dlr.sc.virsat.model.ext.tml.behavioral.ChannelBehaviorDefinition">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+  </categories>
+  <categories name="BehaviorDefinition" description="Super concept for all behavioral categories">
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="parameters" type="de.dlr.sc.virsat.model.ext.tml.behavioral.BehavioralParameterDefinition">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+  </categories>
+  <categories name="TimeEventBehaviorDefinition" description="Category to specify TimeEvent behavior"/>
+  <categories name="TaskBehavior" description="Description of a task behavior"/>
+  <categories name="BehaviorParameter" description="Instance of a behavioral parameter definition">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="typeOf" referenceType="de.dlr.sc.virsat.model.ext.tml.behavioral.BehavioralParameterDefinition"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="value"/>
+  </categories>
+  <categories name="ChannelBehavior" description="Instance of a channel behavior definition">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="typeOf" referenceType="de.dlr.sc.virsat.model.ext.tml.behavioral.ChannelBehaviorDefinition"/>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="parameterInstances" type="de.dlr.sc.virsat.model.ext.tml.behavioral.BehaviorParameter">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+  </categories>
+</dvlm_c:Concept>

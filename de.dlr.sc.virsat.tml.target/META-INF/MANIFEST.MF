@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: VirSat TML Target
+Bundle-SymbolicName: de.dlr.sc.virsat.tml.target
+Bundle-Version: 4.13.0.qualifier
+Require-Bundle: de.dlr.sc.virsat.target
+Bundle-Vendor: DLR (German Aerospace Center)
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: de.dlr.sc.virsat.tml.target

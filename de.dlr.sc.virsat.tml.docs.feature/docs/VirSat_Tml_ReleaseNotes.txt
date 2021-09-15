@@ -1,0 +1,66 @@
+VirSat Stud Release Notes
+-------------------------
+
+Release 4.13.0 (06, September 2021)
+----------------------------------
+
+New Features:
+    Restructuring of TML to support integration into system model and standalone applications
+    - Separated Tasking Environment into TaskingDefinitions (for type definitions) and TaskingEnvrionment (for connection and application of type instances)
+    
+    New diagram layout and technology (breaking change)
+
+
+Bug-Fixes:
+    Fixed a bug in the scoping mechanism of the textual languages
+    Fixed a bug in the code generator that ignored some tasks
+
+Updated build process:
+    Using default maven file structure now
+    Prepared for Open Source Release
+
+Release 4.10.0 (15, November 2019)
+----------------------------------
+
+New Features:
+    TML-Branding
+    - Icons
+    - Perspective
+    - Customized Ui Menus
+    - Generator for Tasking 3
+
+Bug-Fixes:
+    - Improved support for integration into system model
+    - General UI Bugs
+
+Updated build process:
+    - Add EPL license information
+
+
+Release 4.5.0 (28, February 2017)
+----------------------------------
+
+New Features:
+    Implementing new Features of VirSat 4.5.0 Core 
+    
+Usability Updates:
+    
+Fixed Bugs:
+    
+
+
+Release 4.4.0 (28, February 2017)
+----------------------------------
+
+New Features:
+    The project now delivers documentation - #4 Documentation feature 
+    
+Usability Updates:
+    usability Update - #124 It was actually not very useful
+    
+Fixed Bugs:
+    ExampleBug - #123 This Bug never existed
+    ExampleBug - #123 This Bug never existed
+    ExampleBug - #123 This Bug never existed
+
+    

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="structural" nsURI="http://www.virsat.sc.dlr.de/dmf/v1.6/structural"
+    nsPrefix="dmf_structural">
+  <eClassifiers xsi:type="ecore:EClass" name="TaskingDefinition" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basicTypeDefinitions" upperBound="-1"
+        eType="#//BasicTypeDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enumerations" upperBound="-1"
+        eType="#//Enumeration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataTypes" upperBound="-1"
+        eType="#//DataType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalTypes" upperBound="-1"
+        eType="#//ExternalType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="channelBehaviorDefinitions"
+        upperBound="-1" eType="ecore:EClass ../../de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.ecore#//ChannelBehaviorDefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskDefinitions" upperBound="-1"
+        eType="#//TaskDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceFrames" upperBound="-1"
+        eType="#//ReferenceFrameDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
+        eType="#//UnitDefinition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskingEnvironment" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" upperBound="-1"
+        eType="#//TaskInstance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="channels" upperBound="-1"
+        eType="#//Channel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeEvents" upperBound="-1"
+        eType="#//TimeEvent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalParameters" upperBound="-1"
+        eType="#//Attribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastDiagramChange" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schedularPolicy" eType="#//EnumSchedularPolicy"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfExecutors" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EnumSchedularPolicy">
+    <eLiterals name="Priority" value="1" literal="Priority"/>
+    <eLiterals name="FIFO" value="2" literal="FIFO"/>
+    <eLiterals name="LIFO" value="3" literal="LIFO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IEventSource" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+        eType="#//TaskInput"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IType" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskDefinition" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+        eType="#//TaskInputDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
+        eType="#//TaskOutputDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Attribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serializedDefinition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schedulePolicy" eType="#//EnumSchedulePolicy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EnumSchedulePolicy">
+    <eLiterals name="Priority" value="1" literal="Priority"/>
+    <eLiterals name="FIFO" value="2" literal="FIFO"/>
+    <eLiterals name="LIFO" value="3" literal="LIFO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskInputDefinition" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" eType="#//DataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskOutputDefinition" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" eType="#//DataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicTypeDefinition" eSuperTypes="#//IType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueType" eType="#//EnumValueType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="customSource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EnumValueType">
+    <eLiterals name="INTEGER" value="1" literal="INTEGER"/>
+    <eLiterals name="FLOAT" value="2" literal="FLOAT"/>
+    <eLiterals name="STRING" value="3" literal="STRING"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceFrameDefinition" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UnitDefinition" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskInstance" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeOf" eType="#//TaskDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskBehavior" eType="ecore:EClass ../../de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.ecore#//TaskBehavior"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
+        eType="#//TaskOutput" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+        eType="#//TaskInput" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskInput" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeOf" eType="#//TaskInputDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trigger" eType="#//IEventSource"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activationThreshold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFinal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskOutput" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeOf" eType="#//TaskOutputDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="channels" upperBound="-1"
+        eType="#//Channel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeEvent" eSuperTypes="#//IEventSource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="period" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Channel" eSuperTypes="#//IEventSource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" eType="#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="channelBehavior" eType="ecore:EClass ../../de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.ecore#//ChannelBehavior"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//IType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//Attribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstractType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isTMType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serializedDefinition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalType" eSuperTypes="#//DataType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeOf" eType="#//IType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dimensions" upperBound="-1"
+        eType="#//ArrayDimension" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceFrame" eType="#//ReferenceFrameDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeUnit" eType="#//UnitDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isConst" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueLiteral" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxValueLiteral" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minValueLiteral" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArrayDimension" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Enumeration" eSuperTypes="#//IType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="literals" upperBound="-1"
+        eType="#//EnumerationLiteral" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serializedDefinition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumerationLiteral" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="keyNum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+</ecore:EPackage>

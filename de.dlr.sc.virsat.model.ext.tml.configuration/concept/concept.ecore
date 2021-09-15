@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="configuration" nsURI="http://www.virsat.sc.dlr.de/dmf/v1.8/configuration"
+    nsPrefix="dmf_configuration">
+  <eClassifiers xsi:type="ecore:EClass" name="TMLConfiguration" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatorConfiguration"
+        eType="#//GenerationConfiguration" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GenerationConfiguration" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generationPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srcGenPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srcPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildGenPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="testPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="taskDefinitionFolder" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="channelDefinitionFolder"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeDefinitionFolder" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contribFolder" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="libconfigFolder" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="taskingVersion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskingEnvironmentConfiguration"
+        eType="#//TaskingEnvironmentConfiguration" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementConfiguration" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementationName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskingEnvironmentConfiguration" eSuperTypes="#//ElementConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainElement" eType="ecore:EClass ../../de.dlr.sc.virsat.model.ext.tml.structural/concept/concept.ecore#//TaskingEnvironment"/>
+  </eClassifiers>
+</ecore:EPackage>

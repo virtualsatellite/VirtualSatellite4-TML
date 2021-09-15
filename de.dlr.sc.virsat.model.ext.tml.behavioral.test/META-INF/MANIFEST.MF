@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: irSat Model Extension Concept Behavioral Tests
+Bundle-SymbolicName: de.dlr.sc.virsat.model.ext.tml.behavioral.test
+Bundle-Version: 4.13.0.qualifier
+Fragment-Host: de.dlr.sc.virsat.model.ext.tml.behavioral;bundle-version="0.0.1"
+Bundle-ClassPath: .
+Bundle-Vendor: DLR (German Aerospace Center)
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.junit,
+ org.eclipse.emf.edit,
+ org.eclipse.emf.ecore.xmi,
+ de.dlr.sc.virsat.model,
+ de.dlr.sc.virsat.model.edit,
+ de.dlr.sc.virsat.concept.unittest.util
+Export-Package: de.dlr.sc.virsat.model.ext.tml.behavioral.test
+Automatic-Module-Name: de.dlr.sc.virsat.model.ext.tml.behavioral.test

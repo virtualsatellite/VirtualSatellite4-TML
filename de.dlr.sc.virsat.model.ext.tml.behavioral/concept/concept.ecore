@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="behavioral" nsURI="http://www.virsat.sc.dlr.de/dmf/v1.1/behavioral"
+    nsPrefix="dmf_behavioral">
+  <eClassifiers xsi:type="ecore:EClass" name="BehavioralParameterDefinition" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStatic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueType" eType="#//EnumValueType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EnumValueType">
+    <eLiterals name="INTEGER" value="1" literal="INTEGER"/>
+    <eLiterals name="FLOAT" value="2" literal="FLOAT"/>
+    <eLiterals name="STRING" value="3" literal="STRING"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChannelBehaviorDefinition" eSuperTypes="#//BehaviorDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="storageType" eType="#//EnumStorageType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serializedDefinition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EnumStorageType">
+    <eLiterals name="DOUBLE_BUFFER" value="1" literal="DOUBLE_BUFFER"/>
+    <eLiterals name="FIFO" value="2" literal="FIFO"/>
+    <eLiterals name="LIFO" value="3" literal="LIFO"/>
+    <eLiterals name="EVENT_ONLY" value="4" literal="EVENT_ONLY"/>
+    <eLiterals name="CUSTOM" value="5" literal="CUSTOM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BehaviorDefintionStorage" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="channelBehaviorDefintions"
+        upperBound="-1" eType="#//ChannelBehaviorDefinition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BehaviorDefinition" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//BehavioralParameterDefinition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeEventBehaviorDefinition" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskBehavior" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BehaviorParameter" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeOf" eType="#//BehavioralParameterDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChannelBehavior" eSuperTypes="../../de.dlr.sc.virsat.model.ext.core/concept/concept.ecore#//GenericCategory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeOf" eType="#//ChannelBehaviorDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterInstances" upperBound="-1"
+        eType="#//BehaviorParameter" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

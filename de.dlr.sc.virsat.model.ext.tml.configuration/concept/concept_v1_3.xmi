@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dvlm_c:Concept xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dvlm_c="http://www.virsat.sc.dlr.de/dvlm/v5/c" xmlns:dvlm_cp="http://www.virsat.sc.dlr.de/dvlm/v5/cp" xmlns:dvlm_cppd="http://www.virsat.sc.dlr.de/dvlm/v5/cp/cppd" name="de.dlr.sc.virsat.model.ext.tml.configuration" description="Example Concept for Interface Architecture" version="1.3" DMF="true">
+  <imports importedNamespace="de.dlr.sc.virsat.model.extension.ps.*"/>
+  <imports importedNamespace="de.dlr.sc.virsat.model.ext.tml.structural.*"/>
+  <imports importedNamespace="de.dlr.sc.virsat.model.ext.tml.behavioral.*"/>
+  <categories name="TMLConfiguration" description="Contains all TML instance configuration">
+    <applicableFor href="platform:/resource/de.dlr.sc.virsat.model.extension.ps/concept/concept.concept#de.dlr.sc.virsat.model.extension.ps.ElementDefinition"/>
+    <applicableFor href="platform:/resource/de.dlr.sc.virsat.model.extension.ps/concept/concept.concept#de.dlr.sc.virsat.model.extension.ps.ElementConfiguration"/>
+    <applicableFor href="platform:/resource/de.dlr.sc.virsat.model.extension.ps/concept/concept.concept#de.dlr.sc.virsat.model.extension.ps.ElementOccurence"/>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="generatorConfiguration" type="de.dlr.sc.virsat.model.ext.tml.configuration.GenerationConfiguration"/>
+  </categories>
+  <categories name="GenerationConfiguration" description="Contains all generator related configuration">
+    <properties xsi:type="dvlm_cppd:StringProperty" name="generationPath" description="Path to folder where code should be generated to"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="srcGenPath"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="srcPath"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="buildGenPath"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="testPath"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="taskDefinitionFolder"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="channelDefinitionFolder"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="typeDefinitionFolder"/>
+    <properties xsi:type="dvlm_cppd:StringProperty" name="taskingRootFolder"/>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="taskingEnvironmentConfiguration" type="de.dlr.sc.virsat.model.ext.tml.configuration.TaskingEnvironmentConfiguration"/>
+  </categories>
+  <categories name="ElementConfiguration">
+    <properties xsi:type="dvlm_cppd:StringProperty" name="implementationName"/>
+  </categories>
+  <categories name="TaskingEnvironmentConfiguration" extendsCategory="de.dlr.sc.virsat.model.ext.tml.configuration.ElementConfiguration">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="domainElement">
+      <referenceType xsi:type="dvlm_cp:Category" href="platform:/resource/de.dlr.sc.virsat.model.ext.tml.structural/concept/concept.concept#de.dlr.sc.virsat.model.ext.tml.structural.TaskingEnvironment"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="taskDefinitionConfigurations" type="de.dlr.sc.virsat.model.ext.tml.configuration.TaskDefinitionConfiguration">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="channelDefinitionConfigurations" type="de.dlr.sc.virsat.model.ext.tml.configuration.ChannelDefinitionConfiguration">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+    <properties xsi:type="dvlm_cppd:ComposedProperty" name="typeConfigurations" type="de.dlr.sc.virsat.model.ext.tml.configuration.TypeConfiguration">
+      <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
+    </properties>
+  </categories>
+  <categories name="TaskDefinitionConfiguration" description="Configuration of specific task definition" extendsCategory="de.dlr.sc.virsat.model.ext.tml.configuration.ElementConfiguration">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="domainElement">
+      <referenceType xsi:type="dvlm_cp:Category" href="platform:/resource/de.dlr.sc.virsat.model.ext.tml.structural/concept/concept.concept#de.dlr.sc.virsat.model.ext.tml.structural.TaskDefinition"/>
+    </properties>
+  </categories>
+  <categories name="ChannelDefinitionConfiguration" description="Configuration of specific channel definition" extendsCategory="de.dlr.sc.virsat.model.ext.tml.configuration.ElementConfiguration">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="domainElement">
+      <referenceType xsi:type="dvlm_cp:Category" href="platform:/resource/de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.concept#de.dlr.sc.virsat.model.ext.tml.behavioral.ChannelBehaviorDefinition"/>
+    </properties>
+  </categories>
+  <categories name="TypeConfiguration" description="Configuration of specific channel definition" extendsCategory="de.dlr.sc.virsat.model.ext.tml.configuration.ElementConfiguration">
+    <properties xsi:type="dvlm_cppd:ReferenceProperty" name="domainElement">
+      <referenceType xsi:type="dvlm_cp:Category" href="platform:/resource/de.dlr.sc.virsat.model.ext.tml.structural/concept/concept.concept#de.dlr.sc.virsat.model.ext.tml.structural.IType"/>
+    </properties>
+  </categories>
+</dvlm_c:Concept>
