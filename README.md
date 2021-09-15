@@ -35,7 +35,7 @@ Update Sites
 
 ## User Manual
 	
-A user manual is located in the repository under *de.dlr.sc.virsat.tml.docs.feature/docs/user_manual.pdf* and can be found on the [Releases](https://github.com/virtualsatellite/VirtualSatellite4-TML/releases) site.
+A user manual is located in the [Repository](https://github.com/virtualsatellite/VirtualSatellite4-TML/blob/development/de.dlr.sc.virsat.tml.docs.feature/docs/TML_User_Documentation.pdf) under *de.dlr.sc.virsat.tml.docs.feature/docs/TML_User_Documentation.pdf* and can be downloaded from the [Releases](https://github.com/virtualsatellite/VirtualSatellite4-TML/releases) site.
 
 
 ## Quickstart for developers
