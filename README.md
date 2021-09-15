@@ -2,6 +2,8 @@
 
 Model-Based Tool for Generation of Event-Driven Software based on Virtual Satellite 
 
+![TML](https://user-images.githubusercontent.com/49645871/133288171-81200c7e-c0cf-42d4-901c-731fcf81be69.png)
+
 ## Project Status
 
 ![Build Status](https://github.com/virtualsatellite/VirtualSatellite4-TML/workflows/Build/badge.svg?branch=development) Development
@@ -12,7 +14,7 @@ Model-Based Tool for Generation of Event-Driven Software based on Virtual Satell
 
 ## Purpose
 
-This development environment for the Tasking Modeling Language provides advanced editing capabilities for TML models. It allows specifying components, data flow between components and execution events that trigger components. Based on this description, it generates source code implementing the API of [Tasking](https://gitlab-ee.sc.dlr.de/oss/Tasking). Editors and generated code provide extension mechanisms to extend your project to your specific needs.
+This development environment for the Tasking Modeling Language provides advanced editing capabilities for TML models. It allows specifying components, data flow between components and execution events that trigger components. Based on this description, it generates source code implementing the API of [Tasking](https://github.com/DLR-SC/tasking-framework). Editors and generated code provide extension mechanisms to extend your project to your specific needs.
 
 ## Requirements 
 
@@ -53,6 +55,39 @@ Github Actions is set-up to start a build job for every branch and every new com
 
 Starting a Github Actions job on development or integration deploys all relevant artifacts.
 
+## Downloads and Deployment
+
+Deployments are done using GitHub Releases as well as sourceforge: [![Download virtualsatellite](https://sourceforge.net/sflogo.php?type=13&group_id=3065053)](https://sourceforge.net/projects/virtualsatellite/files/VirtualSatellite4-TML/)
+
+## Contribution
+
+We are happy to receive your contributions. Nevertheless in such a big project there is a lot to respect and to obey. 
+One thing to respect are legal requirements such as authorship rights and privacy protection. 
+Therefore, before we can accept your contributions we need you to sign our *Contributor License Agreement (CLA)*.
+The CLA is provided in *English* language only:
+
+[Contributor License Agreement CLA](cla/20190724_DLR_Individual_Contributor_License_Agreement_Virtual_Satellite_en_v1.2.pdf)
+
+Before you sign it and send it to us, you have to read the privacy policy as well.
+The privacy policy is available in *English* and *German (Deutsch)* language: 
+
+To contribute to this project follow the given steps:
+
+[Declaration of consent data processing and privacy policy](cla/20190724_Declaration_of_consent_data_processing_and_privacy_policy_Virtual_Satellite_en_v1.2.pdf)
+
+[Einverständniserklärung Datenverarbeitung und Datenschutz](cla/20190724_Einverständniserklärung_Datenverabreitung_und_Datenschutz_VirtualSatellite_de_v1.2.pdf)
+
+If you agree to the CLA and privacy policy, please fill out the CLA and send it back to us. The detailed process of how to submit the documents is described in the documents themself.
+
+Once you are an authorized committer feel free to contribute. We will not activate your account within our organization. Therefore use Pull-Requests to contribute:
+
+1. Create your own fork of the project.
+2. Apply your changes.
+3. Make sure you own all relevant rights to make this contribution.
+4. Make sure you are obeying legal requirements.
+5. Create a pull-request of your change to our development branch.
+
+To increase chance that we accept your pull-request, make sure all tests are working. The best indicator is the Travis CI job. Next we will review your pull-request, give comments and maybe accept it.
 
 ## License
 
