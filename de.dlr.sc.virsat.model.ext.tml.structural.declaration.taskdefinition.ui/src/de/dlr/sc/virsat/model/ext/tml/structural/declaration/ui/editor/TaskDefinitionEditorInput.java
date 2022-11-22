@@ -106,7 +106,7 @@ public class TaskDefinitionEditorInput extends VirsatCategoryXtextEditorInput {
 		if (getSubject() == null) {
 			return "";
 		}
-		if (!getSubject().getSerializedDefinition().equals("")) {
+		if (getSubject().getSerializedDefinition() != null && !getSubject().getSerializedDefinition().equals("")) {
 			return getSubject().getSerializedDefinition();
 		} else {
 			return initSerialization();
@@ -190,8 +190,7 @@ public class TaskDefinitionEditorInput extends VirsatCategoryXtextEditorInput {
 
 	@Override
 	public String getResourceFileEnding() {
-
-		return null;
+		return "task";
 	}
 
 
