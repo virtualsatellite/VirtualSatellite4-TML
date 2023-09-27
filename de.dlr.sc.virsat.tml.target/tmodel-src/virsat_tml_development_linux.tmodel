@@ -1,10 +1,10 @@
 Target virsat_tml_development_linux extends virsat_linux { 
 
-	ReferencedTarget RepositoryLocation VirSat4CoreReleaseTarget url "https://sourceforge.net/projects/virtualsatellite/files/VirtualSatellite4-Core/release/4.13.0/08b129cb4888ebf263db82a60f3f06a7bab970b9/"{	
+	ReferencedTarget RepositoryLocation VirSat4CoreReleaseTarget url "https://sourceforge.net/projects/virtualsatellite/files/VirtualSatellite4-Core/release/4.12.2/351dbf2fbc8bd6583110fc1aab1b6058e9631a44/"{	
 		Unit de.dlr.sc.virsat.target.feature.feature.group version newest;
 	}
 	
-	RepositoryLocation VirSat4CoreDevelopment url "https://sourceforge.net/projects/virtualsatellite/files/VirtualSatellite4-Core/release/4.13.0/08b129cb4888ebf263db82a60f3f06a7bab970b9/"{	
+	RepositoryLocation VirSat4CoreDevelopment url "https://sourceforge.net/projects/virtualsatellite/files/VirtualSatellite4-Core/release/4.12.2/351dbf2fbc8bd6583110fc1aab1b6058e9631a44/"{	
 		Unit de.dlr.sc.virsat.apps.feature.feature.group version newest;
 		Unit de.dlr.sc.virsat.branding.feature.feature.group version newest;
 		Unit de.dlr.sc.virsat.build.feature.feature.group version newest;
