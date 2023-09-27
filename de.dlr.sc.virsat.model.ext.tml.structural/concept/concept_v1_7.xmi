@@ -5,7 +5,7 @@
   <imports importedNamespace="de.dlr.sc.virsat.model.ext.core.*"/>
   <categories name="TaskingDefinition" description="Overall Container to describe a tasking definitions" cardinality="1">
     <applicableFor href="platform:/resource/de.dlr.sc.virsat.model.extension.ps/concept/concept.concept#de.dlr.sc.virsat.model.extension.ps.ElementDefinition"/>
-    <applicableFor href="concept_v1_7.xmi#de.dlr.sc.virsat.model.ext.tml.structural.TMLRoot"/>
+    <applicableFor href="de.dlr.sc.virsat.model.ext.tml.structural.TMLRoot"/>
     <properties xsi:type="dvlm_cppd:ComposedProperty" name="basicTypeDefinitions" type="de.dlr.sc.virsat.model.ext.tml.structural.BasicTypeDefinition">
       <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
     </properties>
@@ -35,7 +35,7 @@
   </categories>
   <categories name="TaskingEnvironment" description="Overall Container to describe a task model">
     <applicableFor href="platform:/resource/de.dlr.sc.virsat.model.extension.ps/concept/concept.concept#de.dlr.sc.virsat.model.extension.ps.ElementConfiguration"/>
-    <applicableFor href="concept_v1_7.xmi#de.dlr.sc.virsat.model.ext.tml.structural.TMLRoot"/>
+    <applicableFor href="de.dlr.sc.virsat.model.ext.tml.structural.TMLRoot"/>
     <properties xsi:type="dvlm_cppd:ComposedProperty" name="tasks" type="de.dlr.sc.virsat.model.ext.tml.structural.TaskInstance">
       <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
     </properties>

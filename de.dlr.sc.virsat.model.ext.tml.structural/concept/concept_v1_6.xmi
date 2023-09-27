@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ASCII"?>
-<dvlm_c:Concept xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dvlm_c="http://www.virsat.sc.dlr.de/dvlm/v8/c" xmlns:dvlm_cppd="http://www.virsat.sc.dlr.de/dvlm/v8/cp/cppd" name="de.dlr.sc.virsat.model.ext.tml.structural" description="Example Concept for Interface Architecture" version="1.6" DMF="true" displayName="Tasking Structure">
+<dvlm_c:Concept xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dvlm_c="http://www.virsat.sc.dlr.de/dvlm/v10/c" xmlns:dvlm_cppd="http://www.virsat.sc.dlr.de/dvlm/v10/cp/cppd" name="de.dlr.sc.virsat.model.ext.tml.structural" description="Example Concept for Interface Architecture" version="1.6" DMF="true" displayName="Tasking Structure">
   <imports importedNamespace="de.dlr.sc.virsat.model.extension.ps.*"/>
   <imports importedNamespace="de.dlr.sc.virsat.model.ext.tml.behavioral.*"/>
   <imports importedNamespace="de.dlr.sc.virsat.model.ext.core.*"/>
   <categories name="TaskingDefinition" description="Overall Container to describe a tasking definitions" cardinality="1">
     <applicableFor href="platform:/resource/de.dlr.sc.virsat.model.extension.ps/concept/concept.concept#de.dlr.sc.virsat.model.extension.ps.ElementDefinition"/>
-    <applicableFor href="concept_v1_6.xmi#de.dlr.sc.virsat.model.ext.tml.structural.TMLRoot"/>
+    <applicableFor href="de.dlr.sc.virsat.model.ext.tml.structural.TMLRoot"/>
     <properties xsi:type="dvlm_cppd:ComposedProperty" name="basicTypeDefinitions" type="de.dlr.sc.virsat.model.ext.tml.structural.BasicTypeDefinition">
       <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
     </properties>
@@ -35,7 +35,7 @@
   </categories>
   <categories name="TaskingEnvironment" description="Overall Container to describe a task model">
     <applicableFor href="platform:/resource/de.dlr.sc.virsat.model.extension.ps/concept/concept.concept#de.dlr.sc.virsat.model.extension.ps.ElementConfiguration"/>
-    <applicableFor href="concept_v1_6.xmi#de.dlr.sc.virsat.model.ext.tml.structural.TMLRoot"/>
+    <applicableFor href="de.dlr.sc.virsat.model.ext.tml.structural.TMLRoot"/>
     <properties xsi:type="dvlm_cppd:ComposedProperty" name="tasks" type="de.dlr.sc.virsat.model.ext.tml.structural.TaskInstance">
       <arrayModifier xsi:type="dvlm_cppd:DynamicArrayModifier"/>
     </properties>
