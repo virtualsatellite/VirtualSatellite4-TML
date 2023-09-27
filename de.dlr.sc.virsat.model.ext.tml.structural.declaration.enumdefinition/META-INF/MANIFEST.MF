@@ -16,7 +16,7 @@ Require-Bundle: de.dlr.sc.virsat.model.ext.tml.structural,
  de.dlr.sc.virsat.model.ext.tml.structural.declaration;bundle-version="1.0.0",
  de.dlr.sc.virsat.model.ext.tml;bundle-version="1.0.0",
  de.dlr.sc.virsat.model.ext.tml.ui;bundle-version="1.0.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: de.dlr.sc.virsat.model.ext.tml.structural.declaration.parser.antlr.internal,
  de.dlr.sc.virsat.model.ext.tml.structural.declaration.parser.antlr,
  de.dlr.sc.virsat.model.ext.tml.structural.declaration.services,

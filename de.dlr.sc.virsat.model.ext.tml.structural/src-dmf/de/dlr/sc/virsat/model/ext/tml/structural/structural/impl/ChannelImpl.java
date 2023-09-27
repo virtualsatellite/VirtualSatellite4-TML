@@ -3,6 +3,7 @@
 package de.dlr.sc.virsat.model.ext.tml.structural.structural.impl;
 
 import de.dlr.sc.virsat.model.dvlm.general.IUuid;
+import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehavior;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Channel;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.DataType;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.StructuralPackage;
@@ -46,7 +47,7 @@ public class ChannelImpl extends IEventSourceImpl implements Channel {
 	 * @generated
 	 * @ordered
 	 */
-	protected de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehavior channelBehavior;
+	protected ChannelBehavior channelBehavior;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,7 +114,7 @@ public class ChannelImpl extends IEventSourceImpl implements Channel {
 	 * @generated
 	 */
 	@Override
-	public de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehavior getChannelBehavior() {
+	public ChannelBehavior getChannelBehavior() {
 		return channelBehavior;
 	}
 
@@ -122,8 +123,8 @@ public class ChannelImpl extends IEventSourceImpl implements Channel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetChannelBehavior(de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehavior newChannelBehavior, NotificationChain msgs) {
-		de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehavior oldChannelBehavior = channelBehavior;
+	public NotificationChain basicSetChannelBehavior(ChannelBehavior newChannelBehavior, NotificationChain msgs) {
+		ChannelBehavior oldChannelBehavior = channelBehavior;
 		channelBehavior = newChannelBehavior;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StructuralPackage.CHANNEL__CHANNEL_BEHAVIOR, oldChannelBehavior, newChannelBehavior);
@@ -138,7 +139,7 @@ public class ChannelImpl extends IEventSourceImpl implements Channel {
 	 * @generated
 	 */
 	@Override
-	public void setChannelBehavior(de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehavior newChannelBehavior) {
+	public void setChannelBehavior(ChannelBehavior newChannelBehavior) {
 		if (newChannelBehavior != channelBehavior) {
 			NotificationChain msgs = null;
 			if (channelBehavior != null)
@@ -195,7 +196,7 @@ public class ChannelImpl extends IEventSourceImpl implements Channel {
 				setDataType((DataType)newValue);
 				return;
 			case StructuralPackage.CHANNEL__CHANNEL_BEHAVIOR:
-				setChannelBehavior((de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehavior)newValue);
+				setChannelBehavior((ChannelBehavior)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -213,7 +214,7 @@ public class ChannelImpl extends IEventSourceImpl implements Channel {
 				setDataType((DataType)null);
 				return;
 			case StructuralPackage.CHANNEL__CHANNEL_BEHAVIOR:
-				setChannelBehavior((de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehavior)null);
+				setChannelBehavior((ChannelBehavior)null);
 				return;
 		}
 		super.eUnset(featureID);

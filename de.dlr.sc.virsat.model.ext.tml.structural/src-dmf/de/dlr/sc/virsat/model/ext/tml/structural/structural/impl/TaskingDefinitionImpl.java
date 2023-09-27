@@ -10,6 +10,7 @@
 package de.dlr.sc.virsat.model.ext.tml.structural.structural.impl;
 
 import de.dlr.sc.virsat.model.ext.core.core.impl.GenericCategoryImpl;
+import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehaviorDefinition;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.BasicTypeDefinition;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.DataType;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Enumeration;
@@ -101,7 +102,7 @@ public class TaskingDefinitionImpl extends GenericCategoryImpl implements Taskin
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehaviorDefinition> channelBehaviorDefinitions;
+	protected EList<ChannelBehaviorDefinition> channelBehaviorDefinitions;
 
 	/**
 	 * The cached value of the '{@link #getTaskDefinitions() <em>Task Definitions</em>}' containment reference list.
@@ -236,9 +237,9 @@ public class TaskingDefinitionImpl extends GenericCategoryImpl implements Taskin
 	 * @generated
 	 */
 	@Override
-	public EList<de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehaviorDefinition> getChannelBehaviorDefinitions() {
+	public EList<ChannelBehaviorDefinition> getChannelBehaviorDefinitions() {
 		if (channelBehaviorDefinitions == null) {
-			channelBehaviorDefinitions = new EObjectContainmentEList<de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehaviorDefinition>(de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehaviorDefinition.class, this, StructuralPackage.TASKING_DEFINITION__CHANNEL_BEHAVIOR_DEFINITIONS);
+			channelBehaviorDefinitions = new EObjectContainmentEList<ChannelBehaviorDefinition>(ChannelBehaviorDefinition.class, this, StructuralPackage.TASKING_DEFINITION__CHANNEL_BEHAVIOR_DEFINITIONS);
 		}
 		return channelBehaviorDefinitions;
 	}
@@ -339,7 +340,7 @@ public class TaskingDefinitionImpl extends GenericCategoryImpl implements Taskin
 				return;
 			case StructuralPackage.TASKING_DEFINITION__CHANNEL_BEHAVIOR_DEFINITIONS:
 				getChannelBehaviorDefinitions().clear();
-				getChannelBehaviorDefinitions().addAll((Collection<? extends de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehaviorDefinition>)newValue);
+				getChannelBehaviorDefinitions().addAll((Collection<? extends ChannelBehaviorDefinition>)newValue);
 				return;
 			case StructuralPackage.TASKING_DEFINITION__TASK_DEFINITIONS:
 				getTaskDefinitions().clear();

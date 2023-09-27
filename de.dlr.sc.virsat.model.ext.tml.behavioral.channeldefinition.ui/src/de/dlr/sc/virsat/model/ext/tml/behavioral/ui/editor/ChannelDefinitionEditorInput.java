@@ -10,7 +10,6 @@
 package de.dlr.sc.virsat.model.ext.tml.behavioral.ui.editor;
 
 import org.eclipse.core.resources.IFile;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 

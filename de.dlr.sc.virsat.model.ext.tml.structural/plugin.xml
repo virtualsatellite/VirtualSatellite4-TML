@@ -183,7 +183,7 @@
 </extension>
 	<!-- Plugin.XML Protected Region End -->
 	<!-- Plugin.XML Protected Region Start -->
-   <extension point="org.eclipse.emf.ecore.generated_package">
+<extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated concept -->
       <package
             uri="http://www.virsat.sc.dlr.de/dmf/v1.7/structural"
@@ -197,6 +197,5 @@
             type="structural"
             class="de.dlr.sc.virsat.model.ext.tml.structural.structural.util.StructuralResourceFactoryImpl"/>
    </extension>
-
 	<!-- Plugin.XML Protected Region End -->
 </plugin>

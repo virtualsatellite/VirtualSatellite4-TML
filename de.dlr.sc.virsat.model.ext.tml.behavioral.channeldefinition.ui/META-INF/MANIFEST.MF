@@ -24,7 +24,7 @@ Require-Bundle: de.dlr.sc.virsat.model.ext.tml.behavioral.channeldefinition,
  de.dlr.sc.virsat.model.ext.tml.behavioral.channeldefinition.ide;bundle-version="1.0.0",
  org.eclipse.emf.common
 Import-Package: org.apache.log4j
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: de.dlr.sc.virsat.model.ext.tml.behavioral.channeldefinition.ui.internal,
  de.dlr.sc.virsat.model.ext.tml.behavioral.ui.contentassist,
  de.dlr.sc.virsat.model.ext.tml.behavioral.ui.editor,

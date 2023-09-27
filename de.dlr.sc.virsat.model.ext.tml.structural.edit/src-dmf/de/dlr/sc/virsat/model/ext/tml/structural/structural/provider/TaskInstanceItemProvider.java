@@ -4,7 +4,6 @@ package de.dlr.sc.virsat.model.ext.tml.structural.structural.provider;
 
 
 import de.dlr.sc.virsat.model.ext.core.core.provider.GenericCategoryItemProvider;
-import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralFactory;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.StructuralFactory;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.StructuralPackage;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.TaskInstance;
@@ -195,11 +194,6 @@ public class TaskInstanceItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(StructuralPackage.Literals.TASK_INSTANCE__TASK_BEHAVIOR,
-				 BehavioralFactory.eINSTANCE.createTaskBehavior()));
 
 		newChildDescriptors.add
 			(createChildParameter
