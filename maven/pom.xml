@@ -17,8 +17,8 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<tycho-version>1.4.0</tycho-version>
-		<tycho-extras-version>1.4.0</tycho-extras-version>
+		<tycho-version>2.6.0</tycho-version>
+		<tycho-extras-version>2.6.0</tycho-extras-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<build.version>4.13.0</build.version>
