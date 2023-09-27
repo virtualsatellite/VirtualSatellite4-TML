@@ -21,7 +21,7 @@ This development environment for the Tasking Modeling Language provides advanced
 ## Requirements 
 
 Virtual Satellite is based on Java / Eclipse and provides an installable feature with plug-ins for your personal eclipse IDE. The following infrastructure is required:
- - Java Development Kit (JDK) 8 - 64 bit
+ - Java Development Kit (JDK) 11 - 64 bit
  - Windows 7 or Linux Computer - 64 bit
 
 ## Quickstart for users
