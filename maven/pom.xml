@@ -70,7 +70,7 @@
 		<profile>
 			<id>integration</id>
 			<properties>
-				<target.platform.name>virsat_tml_integration</target.platform.name>
+				<target.platform.name>virsat_tml_integration_linux</target.platform.name>
 				<build.qualifier>'i'yyyyMMddHHmm</build.qualifier>
 				<build.folder.type>integration/${build.version}</build.folder.type>
 				<build.file.win32>VirSat_TML_Integration_${build.version}_Win32.zip</build.file.win32>
@@ -81,7 +81,7 @@
 			<id>release</id>
 			<properties>
 				<build.deploy.release>true</build.deploy.release>
-				<target.platform.name>virsat_tml_release</target.platform.name>
+				<target.platform.name>virsat_tml_release_linux</target.platform.name>
 				<build.qualifier>'r'yyyyMMddHHmm</build.qualifier>
 				<build.folder.type>release/${build.version}</build.folder.type>
 				<build.file.win32>VirSat_TML_Release_${build.version}_${env.GITHUB_SHA}_Win32.zip</build.file.win32>
