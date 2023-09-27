@@ -4,4 +4,8 @@ Target virsat_tml_release_linux extends virsat_linux {
 	ReferencedTarget RepositoryLocation VirSat4CoreDevelopment url "https://sourceforge.net/projects/virtualsatellite/files/VirtualSatellite4-Core/release/4.16.0/24188989bef19563442734fd0bd66431ccff11b9/"{	
 		Unit de.dlr.sc.virsat.target.feature.feature.group version newest;
 	}
+	
+	RepositoryLocation EclipseCDT url "https://download.eclipse.org/releases/2022-03"{
+		Unit org.eclipse.cdt.feature.group version newest;
+	}
 } 
