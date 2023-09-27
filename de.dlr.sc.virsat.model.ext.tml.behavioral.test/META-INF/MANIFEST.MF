@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: irSat Model Extension Concept Behavioral Tests
 Bundle-SymbolicName: de.dlr.sc.virsat.model.ext.tml.behavioral.test
-Bundle-Version: 4.13.0.qualifier
+Bundle-Version: 4.16.0.qualifier
 Fragment-Host: de.dlr.sc.virsat.model.ext.tml.behavioral;bundle-version="0.0.1"
 Bundle-ClassPath: .
 Bundle-Vendor: DLR (German Aerospace Center)

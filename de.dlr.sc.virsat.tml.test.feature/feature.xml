@@ -2,7 +2,7 @@
 <feature
       id="de.dlr.sc.virsat.tml.test.feature"
       label="Virsat Tasking Modeling Language Tests Feature"
-      version="4.13.0.qualifier"
+      version="4.16.0.qualifier"
       provider-name="DLR (German Aerospace Center)"
       plugin="de.dlr.sc.virsat.tml.branding.ui">
 
@@ -40,7 +40,7 @@ by German Aerospace Center (DLR e.V.)
       <import plugin="de.dlr.sc.virsat.model.ext.tml.behavioral" version="0.0.1" match="greaterOrEqual"/>
       <import plugin="de.dlr.sc.virsat.model.ext.tml.configuration" version="0.0.1" match="greaterOrEqual"/>
       <import plugin="de.dlr.sc.virsat.model.ext.tml.structural" version="0.0.1" match="greaterOrEqual"/>
-      <import feature="de.dlr.sc.virsat.model.ext.tml.feature" version="4.13.0.qualifier"/>
+      <import feature="de.dlr.sc.virsat.model.ext.tml.feature" version="4.16.0.qualifier"/>
    </requires>
 
    <plugin
