@@ -4,7 +4,6 @@ package de.dlr.sc.virsat.model.ext.tml.configuration.configuration.impl;
 
 import de.dlr.sc.virsat.model.dvlm.DVLMPackage;
 import de.dlr.sc.virsat.model.ext.core.core.CorePackage;
-import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralPackage;
 import de.dlr.sc.virsat.model.ext.tml.configuration.configuration.ConfigurationFactory;
 import de.dlr.sc.virsat.model.ext.tml.configuration.configuration.ConfigurationPackage;
 import de.dlr.sc.virsat.model.ext.tml.configuration.configuration.ElementConfiguration;
@@ -108,7 +107,7 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		CorePackage.eINSTANCE.eClass();
 		StructuralPackage.eINSTANCE.eClass();
 		EcorePackage.eINSTANCE.eClass();
-		BehavioralPackage.eINSTANCE.eClass();
+		de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theConfigurationPackage.createPackageContents();

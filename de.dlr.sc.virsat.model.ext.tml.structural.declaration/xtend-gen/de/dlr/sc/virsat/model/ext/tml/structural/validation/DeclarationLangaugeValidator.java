@@ -9,8 +9,6 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.structural.validation;
 
-import de.dlr.sc.virsat.model.ext.tml.structural.validation.AbstractDeclarationLangaugeValidator;
-
 /**
  * This class contains custom validation rules.
  * 

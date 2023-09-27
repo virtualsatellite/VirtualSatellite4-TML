@@ -39,7 +39,7 @@ public interface ConfigurationPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.virsat.sc.dlr.de/dmf/v1.8/configuration";
+	String eNS_URI = "http://www.virsat.sc.dlr.de/dmf/v1.9/configuration";
 
 	/**
 	 * The package namespace name.

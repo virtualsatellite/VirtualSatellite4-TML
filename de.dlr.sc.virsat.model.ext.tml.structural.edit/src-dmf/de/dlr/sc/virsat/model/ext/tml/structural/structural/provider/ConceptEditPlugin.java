@@ -41,9 +41,9 @@ public final class ConceptEditPlugin extends EMFPlugin {
 	public ConceptEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     DVLMEditPlugin.INSTANCE,
 		     de.dlr.sc.virsat.model.ext.core.core.provider.ConceptEditPlugin.INSTANCE,
 		     de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.provider.ConceptEditPlugin.INSTANCE,
+		     DVLMEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
 		   });
 	}

@@ -3,6 +3,7 @@
 package de.dlr.sc.virsat.model.ext.tml.structural.structural.provider;
 
 
+import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralFactory;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Channel;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.StructuralPackage;
 
@@ -157,6 +158,11 @@ public class ChannelItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructuralPackage.Literals.CHANNEL__CHANNEL_BEHAVIOR,
+				 BehavioralFactory.eINSTANCE.createChannelBehavior()));
 	}
 
 }

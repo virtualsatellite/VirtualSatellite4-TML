@@ -4,8 +4,6 @@ package de.dlr.sc.virsat.model.ext.tml.structural.structural.impl;
 
 import de.dlr.sc.virsat.model.dvlm.DVLMPackage;
 import de.dlr.sc.virsat.model.ext.core.core.CorePackage;
-import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralPackage;
-
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.ArrayDimension;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Attribute;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.BasicTypeDefinition;
@@ -265,9 +263,9 @@ public class StructuralPackageImpl extends EPackageImpl implements StructuralPac
 		isInited = true;
 
 		// Initialize simple dependencies
-		DVLMPackage.eINSTANCE.eClass();
 		CorePackage.eINSTANCE.eClass();
-		BehavioralPackage.eINSTANCE.eClass();
+		de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralPackage.eINSTANCE.eClass();
+		DVLMPackage.eINSTANCE.eClass();
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -1275,7 +1273,7 @@ public class StructuralPackageImpl extends EPackageImpl implements StructuralPac
 
 		// Obtain other dependent packages
 		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
-		BehavioralPackage theBehavioralPackage = (BehavioralPackage)EPackage.Registry.INSTANCE.getEPackage(BehavioralPackage.eNS_URI);
+		de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralPackage theBehavioralPackage = (de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralPackage)EPackage.Registry.INSTANCE.getEPackage(de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralPackage.eNS_URI);
 
 		// Create type parameters
 

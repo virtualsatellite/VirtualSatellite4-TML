@@ -9,8 +9,6 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.behavioral.scoping;
 
-import de.dlr.sc.virsat.model.ext.tml.behavioral.scoping.AbstractChannelDefinitionScopeProvider;
-
 /**
  * This class contains custom scoping description.
  * 

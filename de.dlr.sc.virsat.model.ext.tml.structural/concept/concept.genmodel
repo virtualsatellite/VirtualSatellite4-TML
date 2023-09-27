@@ -5,9 +5,9 @@
     editorDirectory="/de.dlr.sc.virsat.model.ext.tml.structural.editor/src-dmf" modelPluginID="de.dlr.sc.virsat.model.ext.tml.structural"
     modelName="Concept" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     testsDirectory="/de.dlr.sc.virsat.model.ext.tml.structural.tests/src-dmf" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../de.dlr.sc.virsat.model/model/dvlm.genmodel#//dvlm ../../de.dlr.sc.virsat.model.ext.core/concept/concept.genmodel#//core ../../de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.genmodel#//behavioral ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../de.dlr.sc.virsat.model.ext.core/concept/concept.genmodel#//core ../../de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.genmodel#//behavioral ../../de.dlr.sc.virsat.model/model/dvlm.genmodel#//dvlm ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
     operationReflection="true" importOrganizing="true">
-  <foreignModel>/de.dlr.sc.virsat.model.ext.tml.structural/concept/concept.ecore</foreignModel>
+  <foreignModel>concept.ecore</foreignModel>
   <genPackages prefix="Structural" basePackage="de.dlr.sc.virsat.model.ext.tml.structural"
       resource="XMI" disposableProviderFactory="true" ecorePackage="concept.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="concept.ecore#//EnumSchedularPolicy">

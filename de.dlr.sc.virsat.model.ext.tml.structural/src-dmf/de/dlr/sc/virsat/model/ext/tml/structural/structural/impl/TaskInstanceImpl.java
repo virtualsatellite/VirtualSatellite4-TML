@@ -3,8 +3,6 @@
 package de.dlr.sc.virsat.model.ext.tml.structural.structural.impl;
 
 import de.dlr.sc.virsat.model.ext.core.core.impl.GenericCategoryImpl;
-import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.TaskBehavior;
-
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.StructuralPackage;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.TaskDefinition;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.TaskInput;
@@ -81,7 +79,7 @@ public class TaskInstanceImpl extends GenericCategoryImpl implements TaskInstanc
 	 * @generated
 	 * @ordered
 	 */
-	protected TaskBehavior taskBehavior;
+	protected de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.TaskBehavior taskBehavior;
 
 	/**
 	 * The cached value of the '{@link #getOutputs() <em>Outputs</em>}' containment reference list.
@@ -191,7 +189,7 @@ public class TaskInstanceImpl extends GenericCategoryImpl implements TaskInstanc
 	 * @generated
 	 */
 	@Override
-	public TaskBehavior getTaskBehavior() {
+	public de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.TaskBehavior getTaskBehavior() {
 		return taskBehavior;
 	}
 
@@ -200,8 +198,8 @@ public class TaskInstanceImpl extends GenericCategoryImpl implements TaskInstanc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTaskBehavior(TaskBehavior newTaskBehavior, NotificationChain msgs) {
-		TaskBehavior oldTaskBehavior = taskBehavior;
+	public NotificationChain basicSetTaskBehavior(de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.TaskBehavior newTaskBehavior, NotificationChain msgs) {
+		de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.TaskBehavior oldTaskBehavior = taskBehavior;
 		taskBehavior = newTaskBehavior;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StructuralPackage.TASK_INSTANCE__TASK_BEHAVIOR, oldTaskBehavior, newTaskBehavior);
@@ -216,7 +214,7 @@ public class TaskInstanceImpl extends GenericCategoryImpl implements TaskInstanc
 	 * @generated
 	 */
 	@Override
-	public void setTaskBehavior(TaskBehavior newTaskBehavior) {
+	public void setTaskBehavior(de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.TaskBehavior newTaskBehavior) {
 		if (newTaskBehavior != taskBehavior) {
 			NotificationChain msgs = null;
 			if (taskBehavior != null)
@@ -313,7 +311,7 @@ public class TaskInstanceImpl extends GenericCategoryImpl implements TaskInstanc
 				setPriority((Integer)newValue);
 				return;
 			case StructuralPackage.TASK_INSTANCE__TASK_BEHAVIOR:
-				setTaskBehavior((TaskBehavior)newValue);
+				setTaskBehavior((de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.TaskBehavior)newValue);
 				return;
 			case StructuralPackage.TASK_INSTANCE__OUTPUTS:
 				getOutputs().clear();
@@ -342,7 +340,7 @@ public class TaskInstanceImpl extends GenericCategoryImpl implements TaskInstanc
 				setPriority(PRIORITY_EDEFAULT);
 				return;
 			case StructuralPackage.TASK_INSTANCE__TASK_BEHAVIOR:
-				setTaskBehavior((TaskBehavior)null);
+				setTaskBehavior((de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.TaskBehavior)null);
 				return;
 			case StructuralPackage.TASK_INSTANCE__OUTPUTS:
 				getOutputs().clear();

@@ -481,7 +481,7 @@ public class InternalChannelDefinitionParser extends AbstractInternalAntlrParser
                     					if (current==null) {
                     						current = createModelElement(grammarAccess.getBehavioralParameterDefinitionRule());
                     					}
-                    					setWithLastConsumed(current, "isStatic", true, "static");
+                    					setWithLastConsumed(current, "isStatic", lv_isStatic_0_0 != null, "static");
                     				
 
                     }

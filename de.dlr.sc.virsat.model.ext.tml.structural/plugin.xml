@@ -4,7 +4,7 @@
 	<extension point="de.dlr.sc.virsat.model.Concept">
 		<concept
 			id="de.dlr.sc.virsat.model.ext.tml.structural"
-			version="1.6"
+			version="1.7"
 			xmi="concept/concept.xmi">
 		</concept>
 	</extension>
@@ -173,12 +173,20 @@
 		xmi="concept/concept_v1_6.xmi">
 	</migrator>
 </extension>
+<extension point="de.dlr.sc.virsat.model.edit.ConceptMigrator">
+	<migrator
+		id="de.dlr.sc.virsat.model.ext.tml.structural"
+		version="1.7"
+		class="de.dlr.sc.virsat.model.ext.tml.structural.migrator.Migrator1v7"
+		xmi="concept/concept_v1_7.xmi">
+	</migrator>
+</extension>
 	<!-- Plugin.XML Protected Region End -->
 	<!-- Plugin.XML Protected Region Start -->
-<extension point="org.eclipse.emf.ecore.generated_package">
+   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated concept -->
       <package
-            uri="http://www.virsat.sc.dlr.de/dmf/v1.6/structural"
+            uri="http://www.virsat.sc.dlr.de/dmf/v1.7/structural"
             class="de.dlr.sc.virsat.model.ext.tml.structural.structural.StructuralPackage"
             genModel="concept/concept.genmodel"/>
    </extension>
@@ -189,5 +197,6 @@
             type="structural"
             class="de.dlr.sc.virsat.model.ext.tml.structural.structural.util.StructuralResourceFactoryImpl"/>
    </extension>
+
 	<!-- Plugin.XML Protected Region End -->
 </plugin>

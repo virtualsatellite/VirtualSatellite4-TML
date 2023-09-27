@@ -1,4 +1,4 @@
-Concept de.dlr.sc.virsat.model.ext.tml.structural displayname "Tasking Structure" hasDMF version 1.6 description "Example Concept for Interface Architecture" 
+Concept de.dlr.sc.virsat.model.ext.tml.structural displayname "Tasking Structure" hasDMF version 1.7 description "Example Concept for Interface Architecture" 
 {
 	Import de.dlr.sc.virsat.model.extension.ps.*;
 	Import de.dlr.sc.virsat.model.ext.tml.behavioral.*;

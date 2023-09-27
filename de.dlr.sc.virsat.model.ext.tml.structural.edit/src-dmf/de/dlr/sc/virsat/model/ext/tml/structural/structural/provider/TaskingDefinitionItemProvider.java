@@ -11,6 +11,7 @@ package de.dlr.sc.virsat.model.ext.tml.structural.structural.provider;
 
 
 import de.dlr.sc.virsat.model.ext.core.core.provider.GenericCategoryItemProvider;
+import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralFactory;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.StructuralFactory;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.StructuralPackage;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.TaskingDefinition;
@@ -184,6 +185,11 @@ public class TaskingDefinitionItemProvider extends GenericCategoryItemProvider {
 			(createChildParameter
 				(StructuralPackage.Literals.TASKING_DEFINITION__EXTERNAL_TYPES,
 				 StructuralFactory.eINSTANCE.createExternalType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructuralPackage.Literals.TASKING_DEFINITION__CHANNEL_BEHAVIOR_DEFINITIONS,
+				 BehavioralFactory.eINSTANCE.createChannelBehaviorDefinition()));
 
 		newChildDescriptors.add
 			(createChildParameter

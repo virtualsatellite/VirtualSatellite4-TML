@@ -12,7 +12,6 @@ package de.dlr.sc.virsat.model.ext.tml.generator.templates.tasking.source.cpp;
 import com.google.common.base.Objects;
 import de.dlr.sc.virsat.model.ext.tml.generator.IGenerationConfigurationProvider;
 import de.dlr.sc.virsat.model.ext.tml.generator.impl.GenerationConfigurationProvider;
-import de.dlr.sc.virsat.model.ext.tml.generator.templates.tasking.source.cpp.AbstractTaskingTemplate;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Attribute;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.BasicTypeDefinition;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Enumeration;
