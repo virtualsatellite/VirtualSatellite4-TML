@@ -6013,7 +6013,7 @@ public class InternalTaskDefinitionParser extends AbstractInternalContentAssistP
             // InternalTaskDefinition.g:2018:1: ( ( rule__ArrayDimension__SizeAssignment_1 ) )
             {
             // InternalTaskDefinition.g:2018:1: ( ( rule__ArrayDimension__SizeAssignment_1 ) )
-            // InternalTaskDefinition.g:2021:2: ( rule__ArrayDimension__SizeAssignment_1 )
+            // InternalTaskDefinition.g:2019:2: ( rule__ArrayDimension__SizeAssignment_1 )
             {
              before(grammarAccess.getArrayDimensionAccess().getSizeAssignment_1()); 
             // InternalTaskDefinition.g:2020:2: ( rule__ArrayDimension__SizeAssignment_1 )

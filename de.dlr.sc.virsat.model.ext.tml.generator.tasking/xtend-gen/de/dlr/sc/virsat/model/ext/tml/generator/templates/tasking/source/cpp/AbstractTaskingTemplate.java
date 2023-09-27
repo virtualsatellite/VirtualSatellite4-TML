@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2008-2021 German Aerospace Center (DLR), Simulation and Software Technology, Germany.
+ * Copyright (c) 2008-2019 German Aerospace Center (DLR), Simulation and Software Technology, Germany.
  * 
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -32,7 +32,7 @@ public abstract class AbstractTaskingTemplate extends AbstractCppTemplate {
     _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("(c) 2013-2021 DLR Simulation and Software Technology");
+    _builder.append("(c) 2013-2019 DLR Simulation and Software Technology");
     _builder.newLine();
     _builder.append("\t");
     _builder.newLine();
@@ -65,7 +65,7 @@ public abstract class AbstractTaskingTemplate extends AbstractCppTemplate {
     _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("(c) 220212019 DLR Simulation and Software Technology");
+    _builder.append("(c) 2013-2019 DLR Simulation and Software Technology");
     _builder.newLine();
     _builder.append("\t");
     _builder.newLine();
@@ -100,7 +100,7 @@ public abstract class AbstractTaskingTemplate extends AbstractCppTemplate {
     _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("(2021013-2019 DLR Simulation and Software Technology");
+    _builder.append("(c) 2013-2019 DLR Simulation and Software Technology");
     _builder.newLine();
     _builder.append("\t");
     _builder.newLine();

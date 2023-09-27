@@ -93,7 +93,7 @@ To increase chance that we accept your pull-request, make sure all tests are wor
 
 ## License
 
-Copyright 2021 German Aerospace Center (DLR)
+Copyright 2019 German Aerospace Center (DLR)
 
 The German Aerospace Center (DLR) makes available all content in this plug-in ("Content").  Unless otherwise indicated below, the Content is provided to you under the terms and conditions of the Eclipse Public License Version 2.0 ("EPL").  A copy of the EPL is available at https://www.eclipse.org/legal/epl-2.0. For purposes of the EPL, "Program" will mean the Content.
 
