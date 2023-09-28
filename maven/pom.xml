@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Copyright (c) 2008-2019 German Aerospace Center (DLR), Simulation and 
+<!-- Copyright (c) 2008-2021 German Aerospace Center (DLR), Simulation and 
 	Software Technology, Germany. This program and the accompanying materials 
 	are made available under the terms of the Eclipse Public License 2.0 which 
 	is available at http://www.eclipse.org/legal/epl-2.0. SPDX-License-Identifier: 
@@ -12,7 +12,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.dlr.sc.virsat.tml</groupId>
 	<artifactId>de.dlr.sc.virsat.tml.parent</artifactId>
-	<version>4.13.0-SNAPSHOT</version>
+	<version>4.16.0-SNAPSHOT</version>
 	
 	<packaging>pom</packaging>
 
@@ -21,7 +21,7 @@
 		<tycho-extras-version>2.6.0</tycho-extras-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<build.version>4.13.0</build.version>
+		<build.version>4.16.0</build.version>
 		<build.qualifier>'t'yyyyMMddHHmm</build.qualifier>
 		<build.folder.target>../builds</build.folder.target>
 		<build.folder.p2>p2</build.folder.p2>
@@ -70,7 +70,7 @@
 		<profile>
 			<id>integration</id>
 			<properties>
-				<target.platform.name>virsat_tml_integration</target.platform.name>
+				<target.platform.name>virsat_tml_integration_linux</target.platform.name>
 				<build.qualifier>'i'yyyyMMddHHmm</build.qualifier>
 				<build.folder.type>integration/${build.version}</build.folder.type>
 				<build.file.win32>VirSat_TML_Integration_${build.version}_Win32.zip</build.file.win32>
@@ -81,7 +81,7 @@
 			<id>release</id>
 			<properties>
 				<build.deploy.release>true</build.deploy.release>
-				<target.platform.name>virsat_tml_release</target.platform.name>
+				<target.platform.name>virsat_tml_release_linux</target.platform.name>
 				<build.qualifier>'r'yyyyMMddHHmm</build.qualifier>
 				<build.folder.type>release/${build.version}</build.folder.type>
 				<build.file.win32>VirSat_TML_Release_${build.version}_${env.GITHUB_SHA}_Win32.zip</build.file.win32>
@@ -276,7 +276,7 @@
 						<artifact>
 							<groupId>de.dlr.sc.virsat.tml</groupId>
 							<artifactId>de.dlr.sc.virsat.tml.target</artifactId>
-							<version>4.13.0-SNAPSHOT</version>
+							<version>4.16.0-SNAPSHOT</version>
 							<classifier>${target.platform.name}</classifier>
 						</artifact>
 					</target>

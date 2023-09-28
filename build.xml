@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2008-2019 German Aerospace Center (DLR), Simulation and Software Technology, Germany.
+Copyright (c) 2008-2021 German Aerospace Center (DLR), Simulation and Software Technology, Germany.
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
@@ -13,7 +13,7 @@ SPDX-License-Identifier: EPL-2.0
   	  Additional Build Preparations for VirSat and rename of initial template project
   	</description>
 
-	<property name="version">4.13.0</property>
+	<property name="version">4.16.0</property>
 	
 	<property name="version.pattern.qualified">[\s]?[0-9]+\.[0-9]+\.[0-9]+\.qualifier</property>
 	<property name="version.pattern">[\s]?[0-9]+\.[0-9]+\.[0-9]+</property>
