@@ -9,7 +9,6 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.structural.declaration.scoping;
 
-import de.dlr.sc.virsat.model.ext.tml.structural.declaration.scoping.AbstractTaskDefinitionScopeProvider;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.DataType;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.TaskInputDefinition;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.TaskOutputDefinition;

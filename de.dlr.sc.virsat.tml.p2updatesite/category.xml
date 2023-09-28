@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/de.dlr.sc.virsat.tml.branding.feature_4.13.0.qualifier.jar" id="de.dlr.sc.virsat.tml.branding.feature" version="4.13.0.qualifier">
+   <feature url="features/de.dlr.sc.virsat.tml.branding.feature_4.16.0.qualifier.jar" id="de.dlr.sc.virsat.tml.branding.feature" version="4.16.0.qualifier">
       <category name="VirSat_Tml_Features"/>
    </feature>
-   <feature url="features/de.dlr.sc.virsat.tml.license.feature_4.13.0.qualifier.jar" id="de.dlr.sc.virsat.tml.license.feature" version="4.13.0.qualifier">
+   <feature url="features/de.dlr.sc.virsat.tml.license.feature_4.16.0.qualifier.jar" id="de.dlr.sc.virsat.tml.license.feature" version="4.16.0.qualifier">
       <category name="VirSat_Tml_Features"/>
    </feature>
-   <feature url="features/de.dlr.sc.virsat.tml.docs.feature_4.13.0.qualifier.jar" id="de.dlr.sc.virsat.tml.docs.feature" version="4.13.0.qualifier">
+   <feature url="features/de.dlr.sc.virsat.tml.docs.feature_4.16.0.qualifier.jar" id="de.dlr.sc.virsat.tml.docs.feature" version="4.16.0.qualifier">
       <category name="VirSat_Tml_Features"/>
    </feature>
-   <feature url="features/de.dlr.sc.virsat.model.ext.tml.feature_4.13.0.qualifier.jar" id="de.dlr.sc.virsat.model.ext.tml.feature" version="4.13.0.qualifier">
+   <feature url="features/de.dlr.sc.virsat.model.ext.tml.feature_4.16.0.qualifier.jar" id="de.dlr.sc.virsat.model.ext.tml.feature" version="4.16.0.qualifier">
       <category name="VirSat_Tml_Features"/>
    </feature>
    <category-def name="VirSat_Tml_Features" label="VirSat Tml Features">

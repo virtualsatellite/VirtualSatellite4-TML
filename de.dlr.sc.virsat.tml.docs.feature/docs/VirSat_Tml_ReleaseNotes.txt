@@ -1,6 +1,14 @@
 VirSat Stud Release Notes
 -------------------------
 
+Release 4.16.0 (27, September 2023)
+----------------------------------
+
+New Features:
+	Update to java 11
+	Update to latest version of virtual Satellite Core
+
+
 Release 4.13.0 (06, September 2021)
 ----------------------------------
 

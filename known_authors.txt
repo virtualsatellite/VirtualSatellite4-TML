@@ -11,5 +11,7 @@ watollah-dlr
 maurpa
 kempra
 GeorgeNasrDLR
+dellerDLR
+pchrszon-dlr
 PeterOhrDLR
 ayushnepalDLR

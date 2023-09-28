@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: VirSat Model Extension TML Structural Declaration EnumDefinition UI
 Bundle-Vendor: DLR (German Aerospace Center)
-Bundle-Version: 4.13.0.qualifier
+Bundle-Version: 4.16.0.qualifier
 Bundle-SymbolicName: de.dlr.sc.virsat.model.ext.tml.structural.declaration.enumdefinition.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: de.dlr.sc.virsat.model.ext.tml.structural.declaration.enumdefinition,
@@ -23,7 +23,7 @@ Require-Bundle: de.dlr.sc.virsat.model.ext.tml.structural.declaration.enumdefini
  de.dlr.sc.virsat.model.ext.tml.ui;bundle-version="1.0.0",
  de.dlr.sc.virsat.model.ext.tml;bundle-version="1.0.0"
 Import-Package: org.apache.log4j
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: de.dlr.sc.virsat.model.ext.tml.structural.declaration.enumdefinition.ui.internal,
  de.dlr.sc.virsat.model.ext.tml.structural.declaration.ui.contentassist,
  de.dlr.sc.virsat.model.ext.tml.structural.declaration.ui.editor,

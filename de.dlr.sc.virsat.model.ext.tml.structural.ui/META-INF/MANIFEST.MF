@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: VirSat Model Extension TML Structural UI
 Bundle-SymbolicName: de.dlr.sc.virsat.model.ext.tml.structural.ui;singleton:=true
-Bundle-Version: 4.13.0.qualifier
+Bundle-Version: 4.16.0.qualifier
 Require-Bundle: de.dlr.sc.virsat.model.ext.tml.structural,
  org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -33,7 +33,7 @@ Require-Bundle: de.dlr.sc.virsat.model.ext.tml.structural,
  org.eclipse.ui.views.properties.tabbed,
  org.eclipse.gef,
  de.dlr.sc.virsat.model.ext.tml.behavioral.ui;bundle-version="4.10.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: DLR (German Aerospace Center)
 Automatic-Module-Name: de.dlr.sc.virsat.model.ext.tml.structural.ui

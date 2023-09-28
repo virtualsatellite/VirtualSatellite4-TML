@@ -13,7 +13,6 @@ import de.dlr.sc.virsat.model.ext.tml.generator.IFileNameProvider;
 import de.dlr.sc.virsat.model.ext.tml.generator.IGenerationConfigurationProvider;
 import de.dlr.sc.virsat.model.ext.tml.generator.impl.CppFileNameProvider;
 import de.dlr.sc.virsat.model.ext.tml.generator.impl.GenerationConfigurationProvider;
-import de.dlr.sc.virsat.model.ext.tml.generator.templates.source.buildscript.AbstractBuildScriptTemplate;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.TaskingEnvironment;
 import org.eclipse.xtend2.lib.StringConcatenation;
 

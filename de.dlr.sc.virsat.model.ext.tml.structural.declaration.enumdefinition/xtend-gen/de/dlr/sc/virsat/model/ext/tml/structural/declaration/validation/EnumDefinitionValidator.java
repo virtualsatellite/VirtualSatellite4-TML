@@ -10,7 +10,6 @@
 package de.dlr.sc.virsat.model.ext.tml.structural.declaration.validation;
 
 import de.dlr.sc.virsat.model.dvlm.general.GeneralPackage;
-import de.dlr.sc.virsat.model.ext.tml.structural.declaration.validation.AbstractEnumDefinitionValidator;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Enumeration;
 import org.eclipse.xtext.validation.Check;
 

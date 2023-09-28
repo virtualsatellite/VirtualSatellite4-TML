@@ -12,16 +12,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.dlr.sc.virsat.tml</groupId>
 	<artifactId>de.dlr.sc.virsat.tml.parent</artifactId>
-	<version>4.13.0-SNAPSHOT</version>
+	<version>4.16.0-SNAPSHOT</version>
 	
 	<packaging>pom</packaging>
 
 	<properties>
-		<tycho-version>1.4.0</tycho-version>
-		<tycho-extras-version>1.4.0</tycho-extras-version>
+		<tycho-version>2.6.0</tycho-version>
+		<tycho-extras-version>2.6.0</tycho-extras-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<build.version>4.13.0</build.version>
+		<build.version>4.16.0</build.version>
 		<build.qualifier>'t'yyyyMMddHHmm</build.qualifier>
 		<build.folder.target>../builds</build.folder.target>
 		<build.folder.p2>p2</build.folder.p2>
@@ -70,7 +70,7 @@
 		<profile>
 			<id>integration</id>
 			<properties>
-				<target.platform.name>virsat_tml_integration</target.platform.name>
+				<target.platform.name>virsat_tml_integration_linux</target.platform.name>
 				<build.qualifier>'i'yyyyMMddHHmm</build.qualifier>
 				<build.folder.type>integration/${build.version}</build.folder.type>
 				<build.file.win32>VirSat_TML_Integration_${build.version}_Win32.zip</build.file.win32>
@@ -81,9 +81,9 @@
 			<id>release</id>
 			<properties>
 				<build.deploy.release>true</build.deploy.release>
-				<target.platform.name>virsat_tml_release</target.platform.name>
+				<target.platform.name>virsat_tml_release_linux</target.platform.name>
 				<build.qualifier>'r'yyyyMMddHHmm</build.qualifier>
-				<build.folder.type>release/${build.version}/${build.version}</build.folder.type>
+				<build.folder.type>release/${build.version}</build.folder.type>
 				<build.file.win32>VirSat_TML_Release_${build.version}_${env.GITHUB_SHA}_Win32.zip</build.file.win32>
 				<build.file.linux>VirSat_TML_Release_${build.version}_${env.GITHUB_SHA}_Linux.tar.gz</build.file.linux>
 			</properties>
@@ -221,7 +221,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.5</version>
+				<version>0.8.7</version>
 				<executions>
 					<execution>
 						<goals>
@@ -276,7 +276,7 @@
 						<artifact>
 							<groupId>de.dlr.sc.virsat.tml</groupId>
 							<artifactId>de.dlr.sc.virsat.tml.target</artifactId>
-							<version>4.13.0-SNAPSHOT</version>
+							<version>4.16.0-SNAPSHOT</version>
 							<classifier>${target.platform.name}</classifier>
 						</artifact>
 					</target>

@@ -2,12 +2,13 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.structural.structural;
 
-import de.dlr.sc.virsat.model.ext.core.core.CorePackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import de.dlr.sc.virsat.model.ext.core.core.CorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +41,7 @@ public interface StructuralPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.virsat.sc.dlr.de/dmf/v1.6/structural";
+	String eNS_URI = "http://www.virsat.sc.dlr.de/dmf/v1.7/structural";
 
 	/**
 	 * The package namespace name.

@@ -41,6 +41,7 @@ import de.dlr.sc.virsat.model.ext.tml.structural.migrator.Migrator1v5Test;
 import de.dlr.sc.virsat.model.ext.tml.structural.model.EnumerationTest;
 import de.dlr.sc.virsat.model.ext.tml.structural.model.UnitDefinitionTest;
 import de.dlr.sc.virsat.model.ext.tml.structural.model.TaskInputDefinitionTest;
+import de.dlr.sc.virsat.model.ext.tml.structural.migrator.Migrator1v7Test;
 import de.dlr.sc.virsat.model.ext.tml.structural.model.ArrayDimensionTest;
 import de.dlr.sc.virsat.model.ext.tml.structural.validator.StructuralValidatorTest;
 import de.dlr.sc.virsat.model.ext.tml.structural.model.TMLRootTest;
@@ -85,6 +86,7 @@ import de.dlr.sc.virsat.model.ext.tml.structural.model.ExternalTypeTest;
 	Migrator1v4Test.class,
 	Migrator1v5Test.class,
 	Migrator1v6Test.class,
+	Migrator1v7Test.class,
 	StructuralValidatorTest.class,
 				})
 

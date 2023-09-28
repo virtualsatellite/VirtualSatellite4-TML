@@ -4,7 +4,6 @@ package de.dlr.sc.virsat.model.ext.tml.structural.structural.impl;
 
 import de.dlr.sc.virsat.model.ext.core.core.impl.GenericCategoryImpl;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.TaskBehavior;
-
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.StructuralPackage;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.TaskDefinition;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.TaskInput;

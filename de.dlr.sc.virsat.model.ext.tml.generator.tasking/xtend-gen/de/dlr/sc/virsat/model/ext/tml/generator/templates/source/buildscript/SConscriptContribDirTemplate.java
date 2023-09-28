@@ -11,7 +11,6 @@ package de.dlr.sc.virsat.model.ext.tml.generator.templates.source.buildscript;
 
 import de.dlr.sc.virsat.model.ext.tml.generator.IGenerationConfigurationProvider;
 import de.dlr.sc.virsat.model.ext.tml.generator.impl.GenerationConfigurationProvider;
-import de.dlr.sc.virsat.model.ext.tml.generator.templates.source.buildscript.AbstractBuildScriptTemplate;
 import org.eclipse.xtend2.lib.StringConcatenation;
 
 @SuppressWarnings("all")

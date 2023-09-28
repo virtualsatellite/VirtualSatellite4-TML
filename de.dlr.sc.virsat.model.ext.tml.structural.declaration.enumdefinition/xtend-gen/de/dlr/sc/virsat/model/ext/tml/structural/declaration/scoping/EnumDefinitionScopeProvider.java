@@ -9,8 +9,6 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.structural.declaration.scoping;
 
-import de.dlr.sc.virsat.model.ext.tml.structural.declaration.scoping.AbstractEnumDefinitionScopeProvider;
-
 /**
  * This class contains custom scoping description.
  * 

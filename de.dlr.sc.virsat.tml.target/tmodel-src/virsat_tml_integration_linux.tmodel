@@ -1,0 +1,12 @@
+Target virsat_tml_integration_linux extends virsat_linux {
+	Import core_development 
+	
+	ReferencedTarget RepositoryLocation VirSat4CoreDevelopment url "https://sourceforge.net/projects/virtualsatellite/files/VirtualSatellite4-Core/integration/4.16.0/"{	
+		Unit de.dlr.sc.virsat.target.feature.feature.group version newest;
+	}
+	
+	RepositoryLocation EclipseCDT url "https://download.eclipse.org/releases/2022-03"{
+		Unit org.eclipse.cdt.feature.group version newest;
+	}
+} 
+ 

@@ -2,7 +2,7 @@
 <feature
       id="de.dlr.sc.virsat.tml.docs.feature"
       label="VirSat Stud Documents and Release Notes Feature"
-      version="4.13.0.qualifier"
+      version="4.16.0.qualifier"
       provider-name="DLR (German Aerospace Center)"
       plugin="de.dlr.sc.virsat.tml.branding.ui"
       license-feature="de.dlr.sc.virsat.tml.license.feature">

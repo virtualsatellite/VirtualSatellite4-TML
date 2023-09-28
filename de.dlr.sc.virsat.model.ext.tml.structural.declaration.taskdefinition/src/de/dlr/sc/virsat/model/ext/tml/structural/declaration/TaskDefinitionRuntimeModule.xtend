@@ -11,6 +11,7 @@ package de.dlr.sc.virsat.model.ext.tml.structural.declaration
 
 import de.dlr.sc.virsat.model.ext.tml.resource.VirSatAwareXtextResourceSet
 import de.dlr.sc.virsat.model.ext.tml.resource.VirsatReferenceableXtextResource
+import de.dlr.sc.virsat.model.ext.tml.resource.VirsatTransientValueService
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -29,4 +30,8 @@ class TaskDefinitionRuntimeModule extends AbstractTaskDefinitionRuntimeModule {
 		return VirsatReferenceableXtextResource
 	}
 	
+	override bindITransientValueService() {
+		// Ignore some attributes when serializing a DMF model
+		return VirsatTransientValueService
+	}
 }

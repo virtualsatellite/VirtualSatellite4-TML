@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: de.dlr.sc.virsat.model.ext.tml.structural.declaration.taskdefinition.ide
 Bundle-Vendor: My Company
-Bundle-Version: 4.13.0.qualifier
+Bundle-Version: 4.16.0.qualifier
 Bundle-SymbolicName: de.dlr.sc.virsat.model.ext.tml.structural.declaration.taskdefinition.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: de.dlr.sc.virsat.model.ext.tml.structural.declaration.taskdefinition,
@@ -12,7 +12,7 @@ Require-Bundle: de.dlr.sc.virsat.model.ext.tml.structural.declaration.taskdefini
  de.dlr.sc.virsat.model.ext.tml.structural.declaration.ide;bundle-version="1.0.0",
  de.dlr.sc.virsat.model.ext.tml.structural.declaration;bundle-version="1.0.0",
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: de.dlr.sc.virsat.model.ext.tml.structural.declaration.ide.contentassist.antlr,
  de.dlr.sc.virsat.model.ext.tml.structural.declaration.ide.contentassist.antlr.internal
 Automatic-Module-Name: de.dlr.sc.virsat.model.ext.tml.structural.declaration.taskdefinition.ide

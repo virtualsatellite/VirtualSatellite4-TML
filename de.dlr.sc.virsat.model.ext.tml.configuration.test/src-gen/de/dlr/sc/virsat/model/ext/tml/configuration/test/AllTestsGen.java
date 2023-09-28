@@ -30,6 +30,7 @@ import de.dlr.sc.virsat.model.ext.tml.configuration.validator.ConfigurationValid
 import de.dlr.sc.virsat.model.ext.tml.configuration.migrator.Migrator1v0Test;
 import de.dlr.sc.virsat.model.ext.tml.configuration.migrator.Migrator1v7Test;
 import de.dlr.sc.virsat.model.ext.tml.configuration.model.GenerationConfigurationTest;
+import de.dlr.sc.virsat.model.ext.tml.configuration.migrator.Migrator1v9Test;
 import de.dlr.sc.virsat.model.ext.tml.configuration.model.ElementConfigurationTest;
 import de.dlr.sc.virsat.model.ext.tml.configuration.migrator.Migrator1v3Test;
 import de.dlr.sc.virsat.model.ext.tml.configuration.migrator.Migrator1v5Test;
@@ -53,6 +54,7 @@ import de.dlr.sc.virsat.model.ext.tml.configuration.migrator.Migrator1v5Test;
 	Migrator1v6Test.class,
 	Migrator1v7Test.class,
 	Migrator1v8Test.class,
+	Migrator1v9Test.class,
 	ConfigurationValidatorTest.class,
 				})
 

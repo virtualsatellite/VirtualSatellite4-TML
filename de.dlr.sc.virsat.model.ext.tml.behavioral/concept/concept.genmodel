@@ -5,7 +5,7 @@
     editorDirectory="/de.dlr.sc.virsat.model.ext.tml.behavioral.editor/src-dmf" modelPluginID="de.dlr.sc.virsat.model.ext.tml.behavioral"
     modelName="Concept" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     testsDirectory="/de.dlr.sc.virsat.model.ext.tml.behavioral.tests/src-dmf" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../de.dlr.sc.virsat.model/model/dvlm.genmodel#//dvlm ../../de.dlr.sc.virsat.model.ext.core/concept/concept.genmodel#//core ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../de.dlr.sc.virsat.model/model/dvlm.genmodel#//dvlm ../../de.dlr.sc.virsat.model.ext.core/concept/concept.genmodel#//core ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
     operationReflection="true" importOrganizing="true">
   <foreignModel>/de.dlr.sc.virsat.model.ext.tml.behavioral/concept/concept.ecore</foreignModel>
   <genPackages prefix="Behavioral" basePackage="de.dlr.sc.virsat.model.ext.tml.behavioral"

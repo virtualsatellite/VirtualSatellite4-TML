@@ -69,7 +69,7 @@ public class ChannelDefinitionEditorInput extends VirsatCategoryXtextEditorInput
 	@Override
 	public String getResourceFileEnding() {
 
-		return null;
+		return "chDef";
 	}
 
 	@Override
@@ -148,7 +148,7 @@ public class ChannelDefinitionEditorInput extends VirsatCategoryXtextEditorInput
 		if (getSubject() == null) {
 			return "";
 		}
-		if (!getSubject().getSerializedDefinition().equals("")) {
+		if (getSubject().getSerializedDefinition() != null && !getSubject().getSerializedDefinition().equals("")) {
 			return getSubject().getSerializedDefinition();
 		} else {
 			return initSerialization();

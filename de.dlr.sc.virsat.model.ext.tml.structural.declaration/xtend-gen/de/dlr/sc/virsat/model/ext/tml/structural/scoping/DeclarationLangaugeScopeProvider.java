@@ -9,7 +9,6 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.structural.scoping;
 
-import de.dlr.sc.virsat.model.ext.tml.structural.scoping.AbstractDeclarationLangaugeScopeProvider;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Attribute;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.DataType;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.IType;

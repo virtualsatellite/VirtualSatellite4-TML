@@ -9,8 +9,6 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.behavioral;
 
-import de.dlr.sc.virsat.model.ext.tml.behavioral.ChannelDefinitionStandaloneSetupGenerated;
-
 /**
  * Initialization support for running Xtext languages without Equinox extension registry.
  */

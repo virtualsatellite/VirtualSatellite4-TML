@@ -9,7 +9,6 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.behavioral.ui;
 
-import de.dlr.sc.virsat.model.ext.tml.behavioral.ui.AbstractChannelDefinitionUiModule;
 import de.dlr.sc.virsat.model.ext.tml.ui.resource.VirsatCategoryResourceForEditorInputFactory;
 import org.apache.log4j.Logger;
 import org.eclipse.ui.plugin.AbstractUIPlugin;

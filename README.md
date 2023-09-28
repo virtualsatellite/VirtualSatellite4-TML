@@ -4,6 +4,8 @@ Model-Based Tool for Generation of Event-Driven Software based on Virtual Satell
 
 ![TML](https://user-images.githubusercontent.com/49645871/133288171-81200c7e-c0cf-42d4-901c-731fcf81be69.png)
 
+[![DOI](https://zenodo.org/badge/364903420.svg)](https://zenodo.org/badge/latestdoi/364903420)
+
 ## Project Status
 
 ![Build Status](https://github.com/virtualsatellite/VirtualSatellite4-TML/workflows/Build/badge.svg?branch=development) Development
@@ -19,17 +21,17 @@ This development environment for the Tasking Modeling Language provides advanced
 ## Requirements 
 
 Virtual Satellite is based on Java / Eclipse and provides an installable feature with plug-ins for your personal eclipse IDE. The following infrastructure is required:
- - Java Development Kit (JDK) 8 - 64 bit
+ - Java Development Kit (JDK) 11 - 64 bit
  - Windows 7 or Linux Computer - 64 bit
 
 ## Quickstart for users
 
-If you just want to use Virtual Satellite feel free to grap it from the [Releases](https://github.com/virtualsatellite/VirtualSatellite4-TML/releases).
+If you want to use Virtual Satellite TML, grap it from the [Releases](https://github.com/virtualsatellite/VirtualSatellite4-TML/releases).
 
 If you want to install TML into an existing eclipse you can use its *updatesite*.
 Remember that you have to install Virtual Satellite Core as prerequisite ( as [package](https://github.com/virtualsatellite/VirtualSatellite4-Core/releases) or from its [updatesite](https://sourceforge.net/projects/virtualsatellite/files/VirtualSatellite4-Core/release/4.13.0/08b129cb4888ebf263db82a60f3f06a7bab970b9/) )
 
-Update Sites
+TML Update Sites:
 
 	https://sourceforge.net/projects/virtualsatellite/files/VirtualSatellite4-TML/
 
@@ -37,7 +39,7 @@ Update Sites
 
 ## User Manual
 	
-A user manual is located in the repository under *de.dlr.sc.virsat.tml.docs.feature/docs/user_manual.pdf* and can be found on the [Releases](https://github.com/virtualsatellite/VirtualSatellite4-TML/releases) site.
+A user manual is located in the [Repository](https://github.com/virtualsatellite/VirtualSatellite4-TML/blob/development/de.dlr.sc.virsat.tml.docs.feature/docs/TML_User_Documentation.pdf) under *de.dlr.sc.virsat.tml.docs.feature/docs/TML_User_Documentation.pdf* and can be downloaded from the [Releases](https://github.com/virtualsatellite/VirtualSatellite4-TML/releases) site.
 
 
 ## Quickstart for developers

@@ -10,9 +10,7 @@
 package de.dlr.sc.virsat.model.ext.tml.structural.structural.impl;
 
 import de.dlr.sc.virsat.model.ext.core.core.impl.GenericCategoryImpl;
-
 import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehaviorDefinition;
-
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.BasicTypeDefinition;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.DataType;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Enumeration;

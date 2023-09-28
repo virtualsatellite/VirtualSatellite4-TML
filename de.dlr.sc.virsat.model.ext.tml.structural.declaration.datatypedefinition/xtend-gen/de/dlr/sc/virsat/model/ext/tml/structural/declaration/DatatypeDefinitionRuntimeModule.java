@@ -11,7 +11,6 @@ package de.dlr.sc.virsat.model.ext.tml.structural.declaration;
 
 import de.dlr.sc.virsat.model.ext.tml.resource.VirSatAwareXtextResourceSet;
 import de.dlr.sc.virsat.model.ext.tml.resource.VirsatReferenceableXtextResource;
-import de.dlr.sc.virsat.model.ext.tml.structural.declaration.AbstractDatatypeDefinitionRuntimeModule;
 import de.dlr.sc.virsat.model.ext.tml.structural.declaration.serializer.DatatypeTransientValueService;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.xtext.parsetree.reconstr.ITransientValueService;
