@@ -15,7 +15,6 @@ import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.EnumStorageType;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.EnumValueType;
 import de.dlr.sc.virsat.model.ext.tml.generator.IGenerationConfigurationProvider;
 import de.dlr.sc.virsat.model.ext.tml.generator.impl.GenerationConfigurationProvider;
-import de.dlr.sc.virsat.model.ext.tml.generator.templates.tasking.source.cpp.AbstractTaskingTemplate;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;

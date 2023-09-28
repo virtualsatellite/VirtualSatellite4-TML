@@ -9,10 +9,11 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.behavioral;
 
-import de.dlr.sc.virsat.model.ext.tml.behavioral.AbstractChannelDefinitionRuntimeModule;
 import de.dlr.sc.virsat.model.ext.tml.resource.VirSatAwareXtextResourceSet;
 import de.dlr.sc.virsat.model.ext.tml.resource.VirsatReferenceableXtextResource;
+import de.dlr.sc.virsat.model.ext.tml.resource.VirsatTransientValueService;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.xtext.parsetree.reconstr.ITransientValueService;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 
@@ -34,5 +35,10 @@ public class ChannelDefinitionRuntimeModule extends AbstractChannelDefinitionRun
   @Override
   public Class<? extends XtextResource> bindXtextResource() {
     return VirsatReferenceableXtextResource.class;
+  }
+  
+  @Override
+  public Class<? extends ITransientValueService> bindITransientValueService() {
+    return VirsatTransientValueService.class;
   }
 }

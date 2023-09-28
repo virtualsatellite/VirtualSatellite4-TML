@@ -5,7 +5,6 @@ package de.dlr.sc.virsat.model.ext.tml.structural.structural.impl;
 import de.dlr.sc.virsat.model.dvlm.DVLMPackage;
 import de.dlr.sc.virsat.model.ext.core.core.CorePackage;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.BehavioralPackage;
-
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.ArrayDimension;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Attribute;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.BasicTypeDefinition;

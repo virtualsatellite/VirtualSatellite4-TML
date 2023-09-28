@@ -9,7 +9,6 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.structural.declaration.ui;
 
-import de.dlr.sc.virsat.model.ext.tml.structural.declaration.ui.AbstractEnumDefinitionUiModule;
 import de.dlr.sc.virsat.model.ext.tml.ui.resource.VirsatCategoryResourceForEditorInputFactory;
 import de.dlr.sc.virsat.model.ext.tml.util.ResourceUtil;
 import org.apache.log4j.Logger;

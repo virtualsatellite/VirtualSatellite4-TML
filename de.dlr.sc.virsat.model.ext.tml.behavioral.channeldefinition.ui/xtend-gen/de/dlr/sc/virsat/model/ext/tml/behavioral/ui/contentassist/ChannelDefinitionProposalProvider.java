@@ -9,8 +9,6 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.behavioral.ui.contentassist;
 
-import de.dlr.sc.virsat.model.ext.tml.behavioral.ui.contentassist.AbstractChannelDefinitionProposalProvider;
-
 /**
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist
  * on how to customize the content assistant.

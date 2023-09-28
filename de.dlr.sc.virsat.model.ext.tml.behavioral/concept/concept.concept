@@ -1,4 +1,4 @@
-Concept de.dlr.sc.virsat.model.ext.tml.behavioral displayname 'Tasking Behavior' hasDMF description "Example Concept for Interface Architecture" version 1.1
+Concept de.dlr.sc.virsat.model.ext.tml.behavioral displayname 'Tasking Behavior' hasDMF description "Example Concept for Interface Architecture" version 1.2
 {
 	
 //	Import de.dlr.sc.virsat.model.extension.tml.structural.*;

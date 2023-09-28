@@ -9,8 +9,6 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.structural.declaration;
 
-import de.dlr.sc.virsat.model.ext.tml.structural.declaration.TaskDefinitionStandaloneSetupGenerated;
-
 /**
  * Initialization support for running Xtext languages without Equinox extension registry.
  */

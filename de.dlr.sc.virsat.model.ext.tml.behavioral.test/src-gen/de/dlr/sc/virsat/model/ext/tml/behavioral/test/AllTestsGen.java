@@ -23,6 +23,7 @@ import de.dlr.sc.virsat.model.ext.tml.behavioral.model.BehaviorParameterTest;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.model.BehavioralParameterDefinitionTest;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.validator.BehavioralValidatorTest;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.model.ChannelBehaviorDefinitionTest;
+import de.dlr.sc.virsat.model.ext.tml.behavioral.migrator.Migrator1v2Test;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.model.TaskBehaviorTest;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.model.BehaviorDefinitionTest;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.model.TimeEventBehaviorDefinitionTest;
@@ -47,6 +48,7 @@ import de.dlr.sc.virsat.model.ext.tml.behavioral.migrator.Migrator1v1Test;
 	ChannelBehaviorTest.class,
 	Migrator1v0Test.class,
 	Migrator1v1Test.class,
+	Migrator1v2Test.class,
 	BehavioralValidatorTest.class,
 				})
 

@@ -2,10 +2,10 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.structural.structural;
 
+import org.eclipse.emf.common.util.EList;
+
 import de.dlr.sc.virsat.model.ext.core.core.GenericCategory;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.TaskBehavior;
-
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->

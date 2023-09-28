@@ -9,8 +9,6 @@
  *******************************************************************************/
 package de.dlr.sc.virsat.model.ext.tml.structural.ui.handler;
 
-import java.util.Arrays;
-
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
@@ -86,7 +84,7 @@ public class EditDataTypeHandler extends AbstractHandler implements IHandler {
 			workbenchPage.openEditor(editorInput, DatatypeDefinitionEditor.DATATYPE_DEFINITION_EDITOR_ID);
 		} catch (PartInitException ex) {
 			DatatypeDefinitionUiModule.LOGGER.error(
-					"de.dlr.sc.virsat.model.ext.tml.structural.ui.handler: Part Init Exception" + Arrays.toString(ex.getStackTrace()));
+					"de.dlr.sc.virsat.model.ext.tml.structural.ui.handler: Part Init Exception", ex);
 		}
 	}
 

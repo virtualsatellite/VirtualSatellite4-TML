@@ -37,7 +37,7 @@ jobs:
   #---------------------------------------------
   verify:
     name: Verify
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     
     steps:
       # --------------------------------------------
@@ -51,7 +51,7 @@ jobs:
       # handed in by known users
       #---------------------------------------------
       - name: Verify - Authors Sanity Check
-        uses: virtualsatellite/ci-actions/ci-verify-authors-action@v3
+        uses: virtualsatellite/ci-actions/ci-verify-authors-action@v6
       # Actions can also be accessed by other refs such as the latest from branch when using @master such as: 
       # uses: virtualsatellite/ci-actions/ci-verify-authors-action@master   
   # -----------------------------------------------------
@@ -59,7 +59,7 @@ jobs:
   # -----------------------------------------------------
   spotbugs:
     name: Build and Test - Spotbugs
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs: [verify]
 
     steps:
@@ -85,20 +85,20 @@ jobs:
       # Perform various setup operations
       # --------------------------------------------      
       - name: Setup - Prepare OS
-        uses: virtualsatellite/ci-actions/ci-setup-action@v3
+        uses: virtualsatellite/ci-actions/ci-setup-action@v6
 
       # --------------------------------------------
       # Development and Feature branches
       # --------------------------------------------
       - name: Build - Build and Deploy Decision
         id: build_decision
-        uses: virtualsatellite/ci-actions/ci-build-decision-action@v3
+        uses: virtualsatellite/ci-actions/ci-build-decision-action@v6
 
       # --------------------------------------------
       # Development and Feature branches
       # --------------------------------------------
       - name: Build and Test - Spotbugs
-        uses: virtualsatellite/ci-actions/ci-maven-build-action@v3
+        uses: virtualsatellite/ci-actions/ci-maven-build-action@v6
         with:
           build_job: spotbugs
           build_profile: ${{ steps.build_decision.outputs.build_type }}
@@ -108,7 +108,7 @@ jobs:
   # -----------------------------------------------------
   surefire:
     name: Build and Test - Surefire
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs: [verify]
 
     steps:
@@ -134,7 +134,7 @@ jobs:
       # Perform various setup operations
       # --------------------------------------------      
       - name: Setup - Prepare OS
-        uses: virtualsatellite/ci-actions/ci-setup-action@v3
+        uses: virtualsatellite/ci-actions/ci-setup-action@v6
         with:
            xvfb: -x
            pkgs_file: apt_vtk_zmq_packages
@@ -144,13 +144,13 @@ jobs:
       # --------------------------------------------
       - name: Build - Build and Deploy Decision
         id: build_decision
-        uses: virtualsatellite/ci-actions/ci-build-decision-action@v3
+        uses: virtualsatellite/ci-actions/ci-build-decision-action@v6
 
       # --------------------------------------------
       # Development and Feature branches
       # --------------------------------------------
       - name: Build and Test - Surefire
-        uses: virtualsatellite/ci-actions/ci-maven-build-action@v3
+        uses: virtualsatellite/ci-actions/ci-maven-build-action@v6
         with:
           build_job: sureheadless
           build_profile: ${{ steps.build_decision.outputs.build_type }}
@@ -182,7 +182,7 @@ jobs:
   # -----------------------------------------------------
   checkstyle:
     name: Build and Test - Checkstyle
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs: [verify]
 
     steps:
@@ -209,20 +209,20 @@ jobs:
       # Perform various setup operations
       # --------------------------------------------      
       - name: Setup - Prepare OS
-        uses: virtualsatellite/ci-actions/ci-setup-action@v3
+        uses: virtualsatellite/ci-actions/ci-setup-action@v6
 
       # --------------------------------------------
       # Development and Feature branches
       # --------------------------------------------
       - name: Build - Build and Deploy Decision
         id: build_decision
-        uses: virtualsatellite/ci-actions/ci-build-decision-action@v3
+        uses: virtualsatellite/ci-actions/ci-build-decision-action@v6
 
       # --------------------------------------------
       # Development and Feature branches
       # --------------------------------------------
       - name: Build and Test - Checkstyle
-        uses: virtualsatellite/ci-actions/ci-maven-build-action@v3
+        uses: virtualsatellite/ci-actions/ci-maven-build-action@v6
         with:
           build_job: checkstyle
           build_profile: ${{ steps.build_decision.outputs.build_type }}
@@ -232,7 +232,7 @@ jobs:
   # -----------------------------------------------------
   deploy:
     name: Build, Assemble and Deploy
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs: [spotbugs, surefire, checkstyle]
     
     steps:
@@ -258,20 +258,20 @@ jobs:
       # Perform various setup operations
       # --------------------------------------------
       - name: Setup - Prepare OS
-        uses: virtualsatellite/ci-actions/ci-setup-action@v3
+        uses: virtualsatellite/ci-actions/ci-setup-action@v6
 
       # --------------------------------------------
       # Development and Feature branches
       # --------------------------------------------
       - name: Build - Build and Deploy Decision
         id: build_decision
-        uses: virtualsatellite/ci-actions/ci-build-decision-action@v3
+        uses: virtualsatellite/ci-actions/ci-build-decision-action@v6
 
       # --------------------------------------------
       # Development and Feature branches
       # --------------------------------------------
       - name: Build - Assemble
-        uses: virtualsatellite/ci-actions/ci-maven-build-action@v3
+        uses: virtualsatellite/ci-actions/ci-maven-build-action@v6
         with:
           build_job: assemble
           build_profile: ${{ steps.build_decision.outputs.build_type }}
@@ -292,7 +292,7 @@ jobs:
       # Deploying to github releases
       # --------------------------------------------
       - name: Build - Deploy GH
-        uses: virtualsatellite/ci-actions/ci-deploy-gh-product-action@v4
+        uses: virtualsatellite/ci-actions/ci-deploy-gh-product-action@v6
         with:
           build_profile: ${{ steps.build_decision.outputs.build_type }}
           gh_token: ${{ secrets.GITHUB_TOKEN }}
@@ -302,7 +302,7 @@ jobs:
       # SF Deploy 
       # ----------------------------------------------
       - name: Build - Deploy SF (TML)
-        uses: virtualsatellite/ci-actions/ci-deploy-sf-product-action@v3
+        uses: virtualsatellite/ci-actions/ci-deploy-sf-product-action@v6
         with:
           build_profile: ${{ steps.build_decision.outputs.build_type }}
           openssl_pass: ${{ secrets.SF_SSH_KEY_OPENSSL_PASS }}

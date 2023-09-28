@@ -40,7 +40,7 @@ public interface BehavioralPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.virsat.sc.dlr.de/dmf/v1.1/behavioral";
+	String eNS_URI = "http://www.virsat.sc.dlr.de/dmf/v1.2/behavioral";
 
 	/**
 	 * The package namespace name.

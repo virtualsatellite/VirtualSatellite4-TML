@@ -20,14 +20,14 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 
 @Suite.SuiteClasses({
-				de.dlr.sc.virsat.test.ProjectAllTest.class,
-				de.dlr.sc.virsat.model.ext.tml.behavioral.test.AllTests.class,
-				de.dlr.sc.virsat.model.ext.tml.behavioral.test.AllTestsGen.class,
-				de.dlr.sc.virsat.model.ext.tml.structural.test.AllTests.class,
-				de.dlr.sc.virsat.model.ext.tml.structural.test.AllTestsGen.class,
-				de.dlr.sc.virsat.model.ext.tml.configuration.test.AllTests.class,
-				de.dlr.sc.virsat.model.ext.tml.configuration.test.AllTestsGen.class,
-				})
+	de.dlr.sc.virsat.test.ProjectAllTest.class,
+	de.dlr.sc.virsat.model.ext.tml.behavioral.test.AllTests.class,
+	de.dlr.sc.virsat.model.ext.tml.behavioral.test.AllTestsGen.class,
+	de.dlr.sc.virsat.model.ext.tml.structural.test.AllTests.class,
+	de.dlr.sc.virsat.model.ext.tml.structural.test.AllTestsGen.class,
+	de.dlr.sc.virsat.model.ext.tml.configuration.test.AllTests.class,
+	de.dlr.sc.virsat.model.ext.tml.configuration.test.AllTestsGen.class,
+	})
 
 /**
  * Test Class

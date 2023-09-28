@@ -9,8 +9,6 @@
  */
 package de.dlr.sc.virsat.model.ext.tml.structural;
 
-import de.dlr.sc.virsat.model.ext.tml.structural.AbstractDeclarationLangaugeRuntimeModule;
-
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */

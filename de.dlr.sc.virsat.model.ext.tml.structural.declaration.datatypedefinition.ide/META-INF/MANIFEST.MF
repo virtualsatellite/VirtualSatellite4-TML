@@ -12,7 +12,7 @@ Require-Bundle: de.dlr.sc.virsat.model.ext.tml.structural.declaration.datatypede
  de.dlr.sc.virsat.model.ext.tml.structural.declaration.ide;bundle-version="1.0.0",
  de.dlr.sc.virsat.model.ext.tml.structural.declaration;bundle-version="1.0.0",
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: de.dlr.sc.virsat.model.ext.tml.structural.declaration.ide.contentassist.antlr,
  de.dlr.sc.virsat.model.ext.tml.structural.declaration.ide.contentassist.antlr.internal
 Automatic-Module-Name: de.dlr.sc.virsat.model.ext.tml.structural.declaration.datatypedefinition.ide

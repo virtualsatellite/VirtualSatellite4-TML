@@ -1,4 +1,4 @@
-Concept de.dlr.sc.virsat.model.ext.tml.configuration displayname "Tasking Configuration" hasDMF version 1.8 description "Example Concept for Interface Architecture" 
+Concept de.dlr.sc.virsat.model.ext.tml.configuration displayname "Tasking Configuration" hasDMF version 1.9 description "Example Concept for Interface Architecture" 
 {
 	
 	Import de.dlr.sc.virsat.model.extension.ps.*;

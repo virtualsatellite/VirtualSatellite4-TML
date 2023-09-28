@@ -11,7 +11,6 @@ package de.dlr.sc.virsat.model.ext.tml.behavioral.validation;
 
 import de.dlr.sc.virsat.model.dvlm.general.GeneralPackage;
 import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehaviorDefinition;
-import de.dlr.sc.virsat.model.ext.tml.behavioral.validation.AbstractChannelDefinitionValidator;
 import org.eclipse.xtext.validation.Check;
 
 /**

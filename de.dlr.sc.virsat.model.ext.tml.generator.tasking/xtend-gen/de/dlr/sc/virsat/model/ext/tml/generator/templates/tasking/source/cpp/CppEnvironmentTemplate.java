@@ -15,7 +15,6 @@ import de.dlr.sc.virsat.model.ext.tml.behavioral.behavioral.ChannelBehaviorDefin
 import de.dlr.sc.virsat.model.ext.tml.generator.IGenerationConfigurationProvider;
 import de.dlr.sc.virsat.model.ext.tml.generator.TMLGenerator;
 import de.dlr.sc.virsat.model.ext.tml.generator.impl.GenerationConfigurationProvider;
-import de.dlr.sc.virsat.model.ext.tml.generator.templates.tasking.source.cpp.AbstractTaskingTemplate;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Channel;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.DataType;
 import de.dlr.sc.virsat.model.ext.tml.structural.structural.Enumeration;
