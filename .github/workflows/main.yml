@@ -73,7 +73,7 @@ jobs:
       # Setup caching for m2 repository
       # --------------------------------------------
       - name: Setup - Cache local Maven repository
-        uses: actions/cache@v2
+        uses: actions/cache@v4.2.0
         with:
           path: ~/.m2/repository/
           key: ${{ runner.os }}-local-maven-spotbugs-${{ hashFiles('**/pom.xml') }}
@@ -122,7 +122,7 @@ jobs:
       # Setup caching for m2 repository
       # --------------------------------------------
       - name: Setup - Cache local Maven repository
-        uses: actions/cache@v2
+        uses: actions/cache@v4.2.0
         with:
           path: ~/.m2/repository/
           key: ${{ runner.os }}-local-maven-surefire-{{ hashFiles('**/pom.xml') }}
@@ -196,7 +196,7 @@ jobs:
       # Setup caching for m2 repository
       # --------------------------------------------      
       - name: Setup - Cache local Maven repository
-        uses: actions/cache@v2
+        uses: actions/cache@v4.2.0
         with:
           path: ~/.m2/repository/
           key: ${{ runner.os }}-local-maven-checkstyle-${{ hashFiles('**/pom.xml') }}
@@ -246,7 +246,7 @@ jobs:
       # Setup caching for m2 repository
       # --------------------------------------------
       - name: Setup - Cache local Maven repository
-        uses: actions/cache@v2
+        uses: actions/cache@v4.2.0
         with:
           path: ~/.m2/repository/
           key: ${{ runner.os }}-local-maven-deploy-${{ hashFiles('**/pom.xml') }}
